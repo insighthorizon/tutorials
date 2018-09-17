@@ -1,0 +1,2034 @@
+ Command 'echo' from package 'coreutils' (main)
+echp: command not found
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "lolel.txt" | grep -Eo '\..*$'  
+.txt
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+./
+./fileBackup.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+./
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+./
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+./
+./fileBackup.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+sed: -e expression #1, char 10: unterminated `s' command
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+sed: -e expression #1, char 11: unterminated `s' command
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/fileBackup.s
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man sed
+SED(1)                                          User Commands                                          SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+DESCRIPTION
+       Sed  is  a  stream  editor.  A stream editor is used to perform basic text transformations on an input
+       stream (a file or input from a pipeline).  While in some ways  similar  to  an  editor  which  permits
+       scripted  edits (such as ed), sed works by making only one pass over the input(s), and is consequently
+       more efficient.  But it is sed's ability to filter text in a pipeline which particularly distinguishes
+       it from other types of editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add the contents of script-file to the commands to be executed
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+              edit files in place (makes backup if SUFFIX supplied)
+
+       -l N, --line-length=N
+
+              specify the desired line-wrap length for the `l' command
+
+       --posix
+
+              disable all GNU extensions.
+
+       -r, --regexp-extended
+
+              use extended regular expressions in the script.
+
+       -s, --separate
+
+              consider files as separate rather than as a single continuous long stream.
+
+       -u, --unbuffered
+
+              load minimal amounts of data from the input files and flush the output buffers more often
+
+       -z, --null-data
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man sed
+SED(1)                                          User Commands                                          SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+DESCRIPTION
+       Sed  is  a  stream  editor.  A stream editor is used to perform basic text transformations on an input
+       stream (a file or input from a pipeline).  While in some ways  similar  to  an  editor  which  permits
+       scripted  edits (such as ed), sed works by making only one pass over the input(s), and is consequently
+       more efficient.  But it is sed's ability to filter text in a pipeline which particularly distinguishes
+       it from other types of editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add the contents of script-file to the commands to be executed
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+              edit files in place (makes backup if SUFFIX supplied)
+
+       -l N, --line-length=N
+
+              specify the desired line-wrap length for the `l' command
+
+       --posix
+
+              disable all GNU extensions.
+
+       -r, --regexp-extended
+
+              use extended regular expressions in the script.
+
+       -s, --separate
+
+              consider files as separate rather than as a single continuous long stream.
+
+       -u, --unbuffered
+
+              load minimal amounts of data from the input files and flush the output buffers more often
+
+       -z, --null-data
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+/home/marek/fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/fileBacku
+p.sh                                                                                                           
+/home/marek/
+/home/marek/fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ LOLEC=crap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r 's/$LOLEC//g
+'                                                                                                              
+bullcrap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r 's/"$LOLEC"/
+/g'                                                                                                            
+bullcrap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r 's/\"$LOLEC\
+"//g'                                                                                                          
+bullcrap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r 's/"$LOLEC"/
+/g'                                                                                                          
+bullcrap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+sed: -e expression #1, char 6: unknown option to `s'
+./
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+sed: -e expression #1, char 6: unknown option to `s'
+./
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+sed: -e expression #1, char 15: Invalid preceding regular expression
+./
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+sed: -e expression #1, char 8: unknown option to `s'
+./
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh ./fileBackup.sh
+sed: -e expression #1, char 6: unknown option to `s'
+./
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $LOLEC
+crap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed r "s/bull//g"
+sed: can't read s/bull//g: No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r "s/bull//g" 
+crap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r "s/LOLEC//g"
+                                                                                                               
+bullcrap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "bullcrap" | sed -r "s/$LOLEC//g
+"                                                                                                              
+bull
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+sed: -e expression #1, char 10: unknown option to `s'
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+sed: -e expression #1, char 10: unknown option to `s'
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+/home/marek/Documents/tutorials/bash_scripting_tutorial/fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh   fileBackup.sh2018-09-1712:30:39.sh  nextscript.sh   script1.sh
+fileBackup.sh~  myscript.sh                         random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm fileBackup.sh2018-09-1712\:30\:39.
+sh                                                                                                             
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm fileBackup.sh2018-09-1712\:30\:39.
+sh                                                                                                             
+rm: cannot remove 'fileBackup.sh2018-09-1712:30:39.sh': No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup.
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.2018-09-1712:32:12.sh  fileBackup.sh~  nextscript.sh   script1.sh
+fileBackup.sh                     myscript.sh     random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm fileBackup.2018-09-1712\:32\:12.sh
+                                                                                                               
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm fileBackup.2018-09-1712\:32\:12.sh
+                                                                                                               
+rm: cannot remove 'fileBackup.2018-09-1712:32:12.sh': No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+./fileBackup.sh: command substitution: line 8: unexpected EOF while looking for matching `''
+./fileBackup.sh: command substitution: line 9: syntax error: unexpected end of file
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+2018-09-1712:33:56.sh  fileBackup.sh~  nextscript.sh   script1.sh
+fileBackup.sh          myscript.sh     random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup.sh
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+2018-09-1712:33:56.sh  fileBackup.sh~                      myscript.sh    random_word.sh  script2.sh
+fileBackup.sh          fileBackup.sh2018-09-1712:34:47.sh  nextscript.sh  script1.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rn fileBackup.sh2018-09-1712\:34\:47.
+sh                                                                                                             
+The program 'rn' can be found in the following packages:
+ * trn
+ * trn4
+Try: sudo apt install <selected package>
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm fileBackup.sh2018-09-1712\:34\:47.
+sh                                                                                                             
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm fileBackup.sh2018-09-1712\:34\:47.
+sh                                                                                                             
+rm: cannot remove 'fileBackup.sh2018-09-1712:34:47.sh': No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+2018-09-1712:33:56.sh            fileBackup.sh   myscript.sh    random_word.sh  script2.sh
+fileBackup2018-09-1712:35:39.sh  fileBackup.sh~  nextscript.sh  script1.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup
+.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+2018-09-1712:33:56.sh  fileBackup2018-09-1712:35:39.sh  fileBackup.sh~  nextscript.sh   script1.sh
+2018-09-1712:36:14.sh  fileBackup.sh                    myscript.sh     random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm *2018*
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man xarg
+No manual entry for xarg
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man xarg
+No manual entry for xarg
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man xargs
+XARGS(1)                                   General Commands Manual                                   XARGS(1)
+
+NAME
+       xargs - build and execute command lines from standard input
+
+SYNOPSIS
+       xargs  [-0prtx]  [-E  eof-str]  [-e[eof-str]]  [--eof[=eof-str]]  [--null] [-d delimiter] [--delimiter
+       delimiter] [-I replace-str] [-i[replace-str]] [--replace[=replace-str]] [-l[max-lines]] [-L max-lines]
+       [--max-lines[=max-lines]]  [-n  max-args] [--max-args=max-args] [-s max-chars] [--max-chars=max-chars]
+       [-P max-procs] [--max-procs=max-procs] [--process-slot-var=name] [--interactive] [--verbose]  [--exit]
+       [--no-run-if-empty]   [--arg-file=file]   [--show-limits]   [--version]  [--help]  [command  [initial-
+       arguments]]
+
+DESCRIPTION
+       This manual page documents the GNU version of xargs.  xargs reads items from the standard  input,  de‐
+       limited  by  blanks  (which can be protected with double or single quotes or a backslash) or newlines,
+       and executes the command (default is /bin/echo) one or more times with any initial-arguments  followed
+       by items read from standard input.  Blank lines on the standard input are ignored.
+
+       The command line for command is built up until it reaches a system-defined limit (unless the -n and -L
+       options are used).  The specified command will be invoked as many times as necessary  to  use  up  the
+       list  of  input  items.   In  general, there will be many fewer invocations of command than there were
+       items in the input.  This will normally have significant performance benefits.  Some commands can use‐
+       fully be executed in parallel too; see the -P option.
+
+       Because  Unix  filenames can contain blanks and newlines, this default behaviour is often problematic;
+       filenames containing blanks and/or newlines are incorrectly processed by xargs.  In  these  situations
+       it  is  better  to  use the -0 option, which prevents such problems.   When using this option you will
+       need to ensure that the program which produces the input for xargs also uses a  null  character  as  a
+       separator.  If that program is GNU find for example, the -print0 option does this for you.
+
+       If any invocation of the command exits with a status of 255, xargs will stop immediately without read‐
+       ing any further input.  An error message is issued on stderr when this happens.
+
+OPTIONS
+       -0, --null
+              Input items are terminated by a null character instead of by whitespace,  and  the  quotes  and
+              backslash  are  not  special  (every  character  is taken literally).  Disables the end of file
+              string, which is treated like any other argument.  Useful when input items might contain  white
+              space,  quote  marks,  or backslashes.  The GNU find -print0 option produces input suitable for
+              this mode.
+
+       -a file, --arg-file=file
+              Read items from file instead of standard input.  If you use  this  option,  stdin  remains  un‐
+              changed when commands are run.  Otherwise, stdin is redirected from /dev/null.
+
+       --delimiter=delim, -d delim
+              Input items are terminated by the specified character.  The specified delimiter may be a single
+              character, a C-style character escape such as \n, or an octal or hexadecimal escape code.   Oc‐
+              tal  and hexadecimal escape codes are understood as for the printf command.   Multibyte charac‐
+              ters are not supported.  When processing the input, quotes and backslash are not special; every
+              character  in  the  input  is  taken literally.  The -d option disables any end-of-file string,
+              which is treated like any other argument.  You can use this option when the input  consists  of
+              simply  newline-separated  items, although it is almost always better to design your program to
+              use --null where this is possible.
+
+       -E eof-str
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+^C
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup_2018-09-1712:39:10.sh  fileBackup.sh~  nextscript.sh   script1.sh
+fileBackup.sh                     myscript.sh     random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm *~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup_2018-09-1712:39:10.sh  myscript.sh    random_word.sh  script2.sh
+fileBackup.sh                     nextscript.sh  script1.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm *2018*
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh  myscript.sh  nextscript.sh  random_word.sh  script1.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+^C
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh  myscript.sh  nextscript.sh  random_word.sh  script1.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+^C
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ bash -x ./fileBackup.sh ./fileBackup.
+sh                                                                                                             
++ xargs -n1 -i '
+FILEPATH=`echo "${}" | sed -r s/[^/]+$//g`;
+SUFFIX=`echo "${}" | grep -Eo .[^.]*`;
+FILENAME=`echo ${} | grep -Eo [^/]+ | sed -r "s/$SUFFIX//g"`;
+
+echo "$FILEPATH";
+echo "$FILENAME";
+echo "$SUFFIX";
+cp -v "${}" "$PATHO${FILENAME}_`date +%F%T`$SUFFIX";
+' ./fileBackup.sh
+
+
+
+
+^C
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh /home/marek/Documents
+/tutorials/bash_scripting_tutorial/fileBackup.sh                                                               
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup
+.sh
+'/home/marek/Documents/tutorials/bash_scripting_tutorial/fileBackup.sh' -> 'fileBackup_2018-09-1713:02:54.sh'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ xargs -n1 -i ./fileBackup.sh script1.
+sh script2.sh                                                                                                  
+^C
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh script1.sh script2.sh
+                                                                                                               
+
+script1
+.sh
+'script1.sh' -> 'script1_2018-09-1713:08:35.sh'
+
+script2
+.sh
+'script2.sh' -> 'script2_2018-09-1713:08:35.sh'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./fileBackup.sh script1.sh script2.sh
+ /home/marek/Documents/tutorials/bash_scripting_tutorial/fileBackup.sh                                         
+
+script1
+.sh
+'script1.sh' -> 'script1_2018-09-1713:09:11.sh'
+
+script2
+.sh
+'script2.sh' -> 'script2_2018-09-1713:09:11.sh'
+/home/marek/Documents/tutorials/bash_scripting_tutorial/
+fileBackup
+.sh
+'/home/marek/Documents/tutorials/bash_scripting_tutorial/fileBackup.sh' -> 'fileBackup_2018-09-1713:09:11.sh'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup_2018-09-1713:02:54.sh  myscript.sh     script1_2018-09-1713:08:35.sh  script2_2018-09-1713:08:35.sh
+fileBackup_2018-09-1713:09:11.sh  nextscript.sh   script1_2018-09-1713:09:11.sh  script2_2018-09-1713:09:11.sh
+fileBackup.sh                     random_word.sh  script1.sh                     script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat script2_2018-09-1713\:08\:35.sh 
+#!/bin/bash
+# demonstrate variable scope 2
+
+# Let's see the value again
+
+echo $0 :: var1 : $var1, var2 : $var2
+
+var1=flop
+var2=bleh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm *2018*
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh  myscript.sh  nextscript.sh  random_word.sh  script1.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh  myscript.sh  nextscript.sh  random_word.sh  script1.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ bash -x ./fileBackup.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ bash -x ./script1.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man git
+GIT(1)                                            Git Manual                                           GIT(1)
+
+NAME
+       git - the stupid content tracker
+
+SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an unusually rich command set that
+       provides both high-level operations and full access to internals.
+
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful minimum set of commands. The
+       Git User’s Manual[1] has a more in-depth introduction.
+
+       After you mastered the basic concepts, you can come back to this page to learn what commands Git
+       offers. You can learn more about individual Git commands with "git help command". gitcli(7) manual
+       page gives you an overview of the command-line command syntax.
+
+       Formatted and hyperlinked version of the latest Git documentation can be viewed at
+       http://git-htmldocs.googlecode.com/git/git.html.
+
+OPTIONS
+       --version
+           Prints the Git suite version that the git program came from.
+
+       --help
+           Prints the synopsis and a list of the most commonly used commands. If the option --all or -a is
+           given then all available commands are printed. If a Git command is named this option will bring up
+           the manual page for that command.
+
+           Other options are available to control how the manual page is displayed. See git-help(1) for more
+           information, because git --help ...  is converted internally into git help ....
+
+       -C <path>
+           Run as if git was started in <path> instead of the current working directory. When multiple -C
+           options are given, each subsequent non-absolute -C <path> is interpreted relative to the preceding
+           -C <path>.
+
+           This option affects options that expect path name like --git-dir and --work-tree in that their
+           interpretations of the path names would be made relative to the working directory caused by the -C
+           option. For example the following invocations are equivalent:
+
+               git --git-dir=a.git --work-tree=b -C c status
+               git --git-dir=c/a.git --work-tree=c/b status
+
+       -c <name>=<value>
+           Pass a configuration parameter to the command. The value given will override values from
+           configuration files. The <name> is expected in the same format as listed by git config (subkeys
+           separated by dots).
+
+           Note that omitting the = in git -c foo.bar ...  is allowed and sets foo.bar to the boolean true
+           value (just like [foo]bar would in a config file). Including the equals but with an empty value
+...skipping...
+       git-unpack-objects(1)
+           Unpack objects from a packed archive.
+
+       git-update-index(1)
+           Register file contents in the working tree to the index.
+
+       git-update-ref(1)
+           Update the object name stored in a ref safely.
+
+       git-write-tree(1)
+           Create a tree object from the current index.
+
+   Interrogation commands
+       git-cat-file(1)
+           Provide content or type and size information for repository objects.
+
+       git-diff-files(1)
+           Compares files in the working tree and the index.
+
+       git-diff-index(1)
+           Compare a tree to the working tree or index.
+
+       git-diff-tree(1)
+           Compares the content and mode of blobs found via two tree objects.
+
+       git-for-each-ref(1)
+           Output information on each ref.
+
+       git-ls-files(1)
+           Show information about files in the index and the working tree.
+
+       git-ls-remote(1)
+           List references in a remote repository.
+
+       git-ls-tree(1)
+           List the contents of a tree object.
+
+       git-merge-base(1)
+           Find as good common ancestors as possible for a merge.
+
+       git-name-rev(1)
+           Find symbolic names for given revs.
+
+       git-pack-redundant(1)
+           Find redundant pack files.
+
+       git-rev-list(1)
+           Lists commit objects in reverse chronological order.
+
+       git-show-index(1)
+           Show packed archive index.
+
+       git-show-ref(1)
+           List references in a local repository.
+
+       git-unpack-file(1)
+           Creates a temporary file with a blob’s contents.
+
+       git-var(1)
+           Show a Git logical variable.
+
+       git-verify-pack(1)
+           Validate packed Git archive files.
+
+       In general, the interrogate commands do not touch the files in the working tree.
+
+   Synching repositories
+       git-daemon(1)
+           A really simple server for Git repositories.
+
+       git-fetch-pack(1)
+           Receive missing objects from another repository.
+
+       git-http-backend(1)
+           Server side implementation of Git over HTTP.
+
+       git-send-pack(1)
+           Push objects over Git protocol to another repository.
+
+       git-update-server-info(1)
+           Update auxiliary info file to help dumb servers.
+
+       The following are helper commands used by the above; end users typically do not use them directly.
+
+       git-http-fetch(1)
+           Download from a remote Git repository via HTTP.
+
+       git-http-push(1)
+           Push objects over HTTP/DAV to another repository.
+
+       git-parse-remote(1)
+           Routines to help parsing remote repository access parameters.
+
+       git-receive-pack(1)
+           Receive what is pushed into the repository.
+
+       git-shell(1)
+           Restricted login shell for Git-only SSH access.
+
+       git-upload-archive(1)
+           Send archive back to git-archive.
+
+       git-upload-pack(1)
+           Send objects packed back to git-fetch-pack.
+
+   Internal helper commands
+       These are internal helper commands used by other commands; end users typically do not use them
+       directly.
+
+       git-check-attr(1)
+           Display gitattributes information.
+
+       git-check-ignore(1)
+           Debug gitignore / exclude files.
+
+       git-check-mailmap(1)
+           Show canonical names and email addresses of contacts.
+
+       git-check-ref-format(1)
+           Ensures that a reference name is well formed.
+
+       git-column(1)
+           Display data in columns.
+
+       git-credential(1)
+           Retrieve and store user credentials.
+
+       git-credential-cache(1)
+           Helper to temporarily store passwords in memory.
+
+       git-credential-store(1)
+           Helper to store credentials on disk.
+
+       git-fmt-merge-msg(1)
+           Produce a merge commit message.
+
+       git-interpret-trailers(1)
+           help add structured information into commit messages.
+
+       git-mailinfo(1)
+           Extracts patch and authorship from a single e-mail message.
+
+       git-mailsplit(1)
+           Simple UNIX mbox splitter program.
+
+       git-merge-one-file(1)
+           The standard helper program to use with git-merge-index.
+
+       git-patch-id(1)
+           Compute unique ID for a patch.
+
+       git-sh-i18n(1)
+           Git’s i18n setup code for shell scripts.
+
+       git-sh-setup(1)
+           Common Git shell script setup code.
+
+       git-stripspace(1)
+           Remove unnecessary whitespace.
+...skipping...
+           won’t affect existing index files. By default index file version 2 or 3 is used. See git-update-
+           index(1) for more information.
+
+       GIT_OBJECT_DIRECTORY
+           If the object storage directory is specified via this environment variable then the sha1
+           directories are created underneath - otherwise the default $GIT_DIR/objects directory is used.
+
+       GIT_ALTERNATE_OBJECT_DIRECTORIES
+           Due to the immutable nature of Git objects, old objects can be archived into shared, read-only
+           directories. This variable specifies a ":" separated (on Windows ";" separated) list of Git object
+           directories which can be used to search for Git objects. New objects will not be written to these
+           directories.
+
+       GIT_DIR
+           If the GIT_DIR environment variable is set then it specifies a path to use instead of the default
+           .git for the base of the repository. The --git-dir command-line option also sets this value.
+
+       GIT_WORK_TREE
+           Set the path to the root of the working tree. This can also be controlled by the --work-tree
+           command-line option and the core.worktree configuration variable.
+
+       GIT_NAMESPACE
+           Set the Git namespace; see gitnamespaces(7) for details. The --namespace command-line option also
+           sets this value.
+
+       GIT_CEILING_DIRECTORIES
+           This should be a colon-separated list of absolute paths. If set, it is a list of directories that
+           Git should not chdir up into while looking for a repository directory (useful for excluding
+           slow-loading network directories). It will not exclude the current working directory or a GIT_DIR
+           set on the command line or in the environment. Normally, Git has to read the entries in this list
+           and resolve any symlink that might be present in order to compare them with the current directory.
+           However, if even this access is slow, you can add an empty entry to the list to tell Git that the
+           subsequent entries are not symlinks and needn’t be resolved; e.g.,
+           GIT_CEILING_DIRECTORIES=/maybe/symlink::/very/slow/non/symlink.
+
+       GIT_DISCOVERY_ACROSS_FILESYSTEM
+           When run in a directory that does not have ".git" repository directory, Git tries to find such a
+           directory in the parent directories to find the top of the working tree, but by default it does
+           not cross filesystem boundaries. This environment variable can be set to true to tell Git not to
+           stop at filesystem boundaries. Like GIT_CEILING_DIRECTORIES, this will not affect an explicit
+           repository directory set via GIT_DIR or on the command line.
+
+       GIT_COMMON_DIR
+           If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken
+           from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See
+           gitrepository-layout(5) and git-worktree(1) for details. This variable has lower precedence than
+           other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY...
+
+   Git Commits
+       GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_AUTHOR_DATE, GIT_COMMITTER_NAME, GIT_COMMITTER_EMAIL,
+       GIT_COMMITTER_DATE, EMAIL
+           see git-commit-tree(1)
+
+   Git Diffs
+       GIT_DIFF_OPTS
+           Only valid setting is "--unified=??" or "-u??" to set the number of context lines shown when a
+GIT(1)                                            Git Manual                                           GIT(1)
+
+NAME
+       git - the stupid content tracker
+
+SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an unusually rich command set that
+       provides both high-level operations and full access to internals.
+
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful minimum set of commands. The
+       Git User’s Manual[1] has a more in-depth introduction.
+
+       After you mastered the basic concepts, you can come back to this page to learn what commands Git
+       offers. You can learn more about individual Git commands with "git help command". gitcli(7) manual
+       page gives you an overview of the command-line command syntax.
+
+       Formatted and hyperlinked version of the latest Git documentation can be viewed at
+       http://git-htmldocs.googlecode.com/git/git.html.
+
+OPTIONS
+       --version
+           Prints the Git suite version that the git program came from.
+
+       --help
+           Prints the synopsis and a list of the most commonly used commands. If the option --all or -a is
+           given then all available commands are printed. If a Git command is named this option will bring up
+           the manual page for that command.
+
+           Other options are available to control how the manual page is displayed. See git-help(1) for more
+           information, because git --help ...  is converted internally into git help ....
+
+       -C <path>
+           Run as if git was started in <path> instead of the current working directory. When multiple -C
+           options are given, each subsequent non-absolute -C <path> is interpreted relative to the preceding
+           -C <path>.
+
+           This option affects options that expect path name like --git-dir and --work-tree in that their
+           interpretations of the path names would be made relative to the working directory caused by the -C
+           option. For example the following invocations are equivalent:
+
+               git --git-dir=a.git --work-tree=b -C c status
+               git --git-dir=c/a.git --work-tree=c/b status
+
+       -c <name>=<value>
+           Pass a configuration parameter to the command. The value given will override values from
+           configuration files. The <name> is expected in the same format as listed by git config (subkeys
+           separated by dots).
+
+           Note that omitting the = in git -c foo.bar ...  is allowed and sets foo.bar to the boolean true
+           value (just like [foo]bar would in a config file). Including the equals but with an empty value
+...skipping...
+       git-unpack-objects(1)
+           Unpack objects from a packed archive.
+
+       git-update-index(1)
+           Register file contents in the working tree to the index.
+
+       git-update-ref(1)
+           Update the object name stored in a ref safely.
+
+       git-write-tree(1)
+           Create a tree object from the current index.
+
+   Interrogation commands
+       git-cat-file(1)
+           Provide content or type and size information for repository objects.
+
+       git-diff-files(1)
+           Compares files in the working tree and the index.
+
+       git-diff-index(1)
+           Compare a tree to the working tree or index.
+
+       git-diff-tree(1)
+           Compares the content and mode of blobs found via two tree objects.
+
+       git-for-each-ref(1)
+           Output information on each ref.
+
+       git-ls-files(1)
+           Show information about files in the index and the working tree.
+
+       git-ls-remote(1)
+           List references in a remote repository.
+
+       git-ls-tree(1)
+           List the contents of a tree object.
+
+       git-merge-base(1)
+           Find as good common ancestors as possible for a merge.
+
+       git-name-rev(1)
+           Find symbolic names for given revs.
+
+       git-pack-redundant(1)
+           Find redundant pack files.
+
+       git-rev-list(1)
+           Lists commit objects in reverse chronological order.
+
+       git-show-index(1)
+           Show packed archive index.
+
+       git-show-ref(1)
+           List references in a local repository.
+
+       git-unpack-file(1)
+           Creates a temporary file with a blob’s contents.
+
+       git-var(1)
+           Show a Git logical variable.
+
+       git-verify-pack(1)
+           Validate packed Git archive files.
+
+       In general, the interrogate commands do not touch the files in the working tree.
+
+   Synching repositories
+       git-daemon(1)
+           A really simple server for Git repositories.
+
+       git-fetch-pack(1)
+           Receive missing objects from another repository.
+
+       git-http-backend(1)
+           Server side implementation of Git over HTTP.
+
+       git-send-pack(1)
+           Push objects over Git protocol to another repository.
+
+       git-update-server-info(1)
+           Update auxiliary info file to help dumb servers.
+
+       The following are helper commands used by the above; end users typically do not use them directly.
+
+       git-http-fetch(1)
+           Download from a remote Git repository via HTTP.
+
+       git-http-push(1)
+           Push objects over HTTP/DAV to another repository.
+
+       git-parse-remote(1)
+           Routines to help parsing remote repository access parameters.
+
+       git-receive-pack(1)
+           Receive what is pushed into the repository.
+
+       git-shell(1)
+           Restricted login shell for Git-only SSH access.
+
+       git-upload-archive(1)
+           Send archive back to git-archive.
+
+       git-upload-pack(1)
+           Send objects packed back to git-fetch-pack.
+
+   Internal helper commands
+       These are internal helper commands used by other commands; end users typically do not use them
+       directly.
+
+       git-check-attr(1)
+           Display gitattributes information.
+
+       git-check-ignore(1)
+           Debug gitignore / exclude files.
+
+       git-check-mailmap(1)
+           Show canonical names and email addresses of contacts.
+
+       git-check-ref-format(1)
+           Ensures that a reference name is well formed.
+
+       git-column(1)
+           Display data in columns.
+
+       git-credential(1)
+           Retrieve and store user credentials.
+
+       git-credential-cache(1)
+           Helper to temporarily store passwords in memory.
+
+       git-credential-store(1)
+           Helper to store credentials on disk.
+
+       git-fmt-merge-msg(1)
+           Produce a merge commit message.
+
+       git-interpret-trailers(1)
+           help add structured information into commit messages.
+
+       git-mailinfo(1)
+           Extracts patch and authorship from a single e-mail message.
+
+       git-mailsplit(1)
+           Simple UNIX mbox splitter program.
+
+       git-merge-one-file(1)
+           The standard helper program to use with git-merge-index.
+
+       git-patch-id(1)
+           Compute unique ID for a patch.
+
+       git-sh-i18n(1)
+           Git’s i18n setup code for shell scripts.
+
+       git-sh-setup(1)
+           Common Git shell script setup code.
+
+       git-stripspace(1)
+           Remove unnecessary whitespace.
+...skipping...
+           won’t affect existing index files. By default index file version 2 or 3 is used. See git-update-
+           index(1) for more information.
+
+       GIT_OBJECT_DIRECTORY
+           If the object storage directory is specified via this environment variable then the sha1
+           directories are created underneath - otherwise the default $GIT_DIR/objects directory is used.
+
+       GIT_ALTERNATE_OBJECT_DIRECTORIES
+           Due to the immutable nature of Git objects, old objects can be archived into shared, read-only
+           directories. This variable specifies a ":" separated (on Windows ";" separated) list of Git object
+           directories which can be used to search for Git objects. New objects will not be written to these
+           directories.
+
+       GIT_DIR
+           If the GIT_DIR environment variable is set then it specifies a path to use instead of the default
+           .git for the base of the repository. The --git-dir command-line option also sets this value.
+
+       GIT_WORK_TREE
+           Set the path to the root of the working tree. This can also be controlled by the --work-tree
+           command-line option and the core.worktree configuration variable.
+
+       GIT_NAMESPACE
+           Set the Git namespace; see gitnamespaces(7) for details. The --namespace command-line option also
+           sets this value.
+
+       GIT_CEILING_DIRECTORIES
+           This should be a colon-separated list of absolute paths. If set, it is a list of directories that
+           Git should not chdir up into while looking for a repository directory (useful for excluding
+           slow-loading network directories). It will not exclude the current working directory or a GIT_DIR
+           set on the command line or in the environment. Normally, Git has to read the entries in this list
+           and resolve any symlink that might be present in order to compare them with the current directory.
+           However, if even this access is slow, you can add an empty entry to the list to tell Git that the
+           subsequent entries are not symlinks and needn’t be resolved; e.g.,
+           GIT_CEILING_DIRECTORIES=/maybe/symlink::/very/slow/non/symlink.
+
+       GIT_DISCOVERY_ACROSS_FILESYSTEM
+           When run in a directory that does not have ".git" repository directory, Git tries to find such a
+           directory in the parent directories to find the top of the working tree, but by default it does
+           not cross filesystem boundaries. This environment variable can be set to true to tell Git not to
+           stop at filesystem boundaries. Like GIT_CEILING_DIRECTORIES, this will not affect an explicit
+           repository directory set via GIT_DIR or on the command line.
+
+       GIT_COMMON_DIR
+           If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken
+           from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See
+           gitrepository-layout(5) and git-worktree(1) for details. This variable has lower precedence than
+           other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY...
+
+   Git Commits
+       GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_AUTHOR_DATE, GIT_COMMITTER_NAME, GIT_COMMITTER_EMAIL,
+       GIT_COMMITTER_DATE, EMAIL
+           see git-commit-tree(1)
+
+   Git Diffs
+       GIT_DIFF_OPTS
+GIT(1)                                            Git Manual                                           GIT(1)
+
+NAME
+       git - the stupid content tracker
+
+SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an unusually rich command set that
+       provides both high-level operations and full access to internals.
+
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful minimum set of commands. The
+       Git User’s Manual[1] has a more in-depth introduction.
+
+       After you mastered the basic concepts, you can come back to this page to learn what commands Git
+       offers. You can learn more about individual Git commands with "git help command". gitcli(7) manual
+       page gives you an overview of the command-line command syntax.
+
+       Formatted and hyperlinked version of the latest Git documentation can be viewed at
+       http://git-htmldocs.googlecode.com/git/git.html.
+
+OPTIONS
+       --version
+           Prints the Git suite version that the git program came from.
+
+       --help
+           Prints the synopsis and a list of the most commonly used commands. If the option --all or -a is
+           given then all available commands are printed. If a Git command is named this option will bring up
+           the manual page for that command.
+
+           Other options are available to control how the manual page is displayed. See git-help(1) for more
+           information, because git --help ...  is converted internally into git help ....
+
+       -C <path>
+           Run as if git was started in <path> instead of the current working directory. When multiple -C
+           options are given, each subsequent non-absolute -C <path> is interpreted relative to the preceding
+           -C <path>.
+
+           This option affects options that expect path name like --git-dir and --work-tree in that their
+           interpretations of the path names would be made relative to the working directory caused by the -C
+           option. For example the following invocations are equivalent:
+
+               git --git-dir=a.git --work-tree=b -C c status
+               git --git-dir=c/a.git --work-tree=c/b status
+
+       -c <name>=<value>
+           Pass a configuration parameter to the command. The value given will override values from
+           configuration files. The <name> is expected in the same format as listed by git config (subkeys
+           separated by dots).
+
+           Note that omitting the = in git -c foo.bar ...  is allowed and sets foo.bar to the boolean true
+           value (just like [foo]bar would in a config file). Including the equals but with an empty value
+...skipping...
+       git-unpack-objects(1)
+           Unpack objects from a packed archive.
+
+       git-update-index(1)
+           Register file contents in the working tree to the index.
+
+       git-update-ref(1)
+           Update the object name stored in a ref safely.
+
+       git-write-tree(1)
+           Create a tree object from the current index.
+
+   Interrogation commands
+       git-cat-file(1)
+           Provide content or type and size information for repository objects.
+
+       git-diff-files(1)
+           Compares files in the working tree and the index.
+
+       git-diff-index(1)
+           Compare a tree to the working tree or index.
+
+       git-diff-tree(1)
+           Compares the content and mode of blobs found via two tree objects.
+
+       git-for-each-ref(1)
+           Output information on each ref.
+
+       git-ls-files(1)
+           Show information about files in the index and the working tree.
+
+       git-ls-remote(1)
+           List references in a remote repository.
+
+       git-ls-tree(1)
+           List the contents of a tree object.
+
+       git-merge-base(1)
+           Find as good common ancestors as possible for a merge.
+
+       git-name-rev(1)
+           Find symbolic names for given revs.
+
+       git-pack-redundant(1)
+           Find redundant pack files.
+
+       git-rev-list(1)
+           Lists commit objects in reverse chronological order.
+
+       git-show-index(1)
+           Show packed archive index.
+
+       git-show-ref(1)
+           List references in a local repository.
+
+       git-unpack-file(1)
+           Creates a temporary file with a blob’s contents.
+
+       git-var(1)
+           Show a Git logical variable.
+
+       git-verify-pack(1)
+           Validate packed Git archive files.
+
+       In general, the interrogate commands do not touch the files in the working tree.
+
+   Synching repositories
+       git-daemon(1)
+           A really simple server for Git repositories.
+
+       git-fetch-pack(1)
+           Receive missing objects from another repository.
+
+       git-http-backend(1)
+           Server side implementation of Git over HTTP.
+
+       git-send-pack(1)
+           Push objects over Git protocol to another repository.
+
+       git-update-server-info(1)
+           Update auxiliary info file to help dumb servers.
+
+       The following are helper commands used by the above; end users typically do not use them directly.
+
+       git-http-fetch(1)
+           Download from a remote Git repository via HTTP.
+
+       git-http-push(1)
+           Push objects over HTTP/DAV to another repository.
+
+       git-parse-remote(1)
+           Routines to help parsing remote repository access parameters.
+
+       git-receive-pack(1)
+           Receive what is pushed into the repository.
+
+       git-shell(1)
+           Restricted login shell for Git-only SSH access.
+
+       git-upload-archive(1)
+           Send archive back to git-archive.
+
+       git-upload-pack(1)
+           Send objects packed back to git-fetch-pack.
+
+   Internal helper commands
+       These are internal helper commands used by other commands; end users typically do not use them
+       directly.
+
+       git-check-attr(1)
+           Display gitattributes information.
+
+       git-check-ignore(1)
+           Debug gitignore / exclude files.
+
+       git-check-mailmap(1)
+           Show canonical names and email addresses of contacts.
+
+       git-check-ref-format(1)
+           Ensures that a reference name is well formed.
+
+       git-column(1)
+           Display data in columns.
+
+       git-credential(1)
+           Retrieve and store user credentials.
+
+       git-credential-cache(1)
+           Helper to temporarily store passwords in memory.
+
+       git-credential-store(1)
+           Helper to store credentials on disk.
+
+       git-fmt-merge-msg(1)
+           Produce a merge commit message.
+
+       git-interpret-trailers(1)
+           help add structured information into commit messages.
+
+       git-mailinfo(1)
+           Extracts patch and authorship from a single e-mail message.
+
+       git-mailsplit(1)
+           Simple UNIX mbox splitter program.
+
+       git-merge-one-file(1)
+           The standard helper program to use with git-merge-index.
+
+       git-patch-id(1)
+           Compute unique ID for a patch.
+
+       git-sh-i18n(1)
+           Git’s i18n setup code for shell scripts.
+
+       git-sh-setup(1)
+           Common Git shell script setup code.
+
+       git-stripspace(1)
+           Remove unnecessary whitespace.
+...skipping...
+           won’t affect existing index files. By default index file version 2 or 3 is used. See git-update-
+           index(1) for more information.
+
+       GIT_OBJECT_DIRECTORY
+           If the object storage directory is specified via this environment variable then the sha1
+           directories are created underneath - otherwise the default $GIT_DIR/objects directory is used.
+
+       GIT_ALTERNATE_OBJECT_DIRECTORIES
+           Due to the immutable nature of Git objects, old objects can be archived into shared, read-only
+           directories. This variable specifies a ":" separated (on Windows ";" separated) list of Git object
+           directories which can be used to search for Git objects. New objects will not be written to these
+           directories.
+
+       GIT_DIR
+           If the GIT_DIR environment variable is set then it specifies a path to use instead of the default
+           .git for the base of the repository. The --git-dir command-line option also sets this value.
+
+       GIT_WORK_TREE
+           Set the path to the root of the working tree. This can also be controlled by the --work-tree
+           command-line option and the core.worktree configuration variable.
+
+       GIT_NAMESPACE
+           Set the Git namespace; see gitnamespaces(7) for details. The --namespace command-line option also
+           sets this value.
+
+       GIT_CEILING_DIRECTORIES
+           This should be a colon-separated list of absolute paths. If set, it is a list of directories that
+           Git should not chdir up into while looking for a repository directory (useful for excluding
+           slow-loading network directories). It will not exclude the current working directory or a GIT_DIR
+           set on the command line or in the environment. Normally, Git has to read the entries in this list
+           and resolve any symlink that might be present in order to compare them with the current directory.
+           However, if even this access is slow, you can add an empty entry to the list to tell Git that the
+           subsequent entries are not symlinks and needn’t be resolved; e.g.,
+           GIT_CEILING_DIRECTORIES=/maybe/symlink::/very/slow/non/symlink.
+
+       GIT_DISCOVERY_ACROSS_FILESYSTEM
+           When run in a directory that does not have ".git" repository directory, Git tries to find such a
+           directory in the parent directories to find the top of the working tree, but by default it does
+           not cross filesystem boundaries. This environment variable can be set to true to tell Git not to
+           stop at filesystem boundaries. Like GIT_CEILING_DIRECTORIES, this will not affect an explicit
+           repository directory set via GIT_DIR or on the command line.
+
+       GIT_COMMON_DIR
+           If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken
+           from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See
+           gitrepository-layout(5) and git-worktree(1) for details. This variable has lower precedence than
+           other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY...
+
+   Git Commits
+       GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_AUTHOR_DATE, GIT_COMMITTER_NAME, GIT_COMMITTER_EMAIL,
+       GIT_COMMITTER_DATE, EMAIL
+           see git-commit-tree(1)
+
+   Git Diffs
+       GIT_DIFF_OPTS
+           Only valid setting is "--unified=??" or "-u??" to set the number of context lines shown when a
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh  myscript.sh  nextscript.sh  random_word.sh  script1.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $VAR1
+crap
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ VAR1=
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $VAR1
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ unset $VAR1
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $VAR1
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ unset VAR1
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $VAR1
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch introduction.sh | chmod 750
+chmod: missing operand after ‘750’
+Try 'chmod --help' for more information.
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch introduction.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 introduction.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+fileBackup.sh    introduction.sh~  nextscript.sh   script1.sh
+introduction.sh  myscript.sh       random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./introduction.sh
+Hello, who am I talking to?
+lolík
+It's nice to meet you lolík
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man read
+READ(2)                                   Linux Programmer's Manual                                   READ(2)
+
+NAME
+       read - read from a file descriptor
+
+SYNOPSIS
+       #include <unistd.h>
+
+       ssize_t read(int fd, void *buf, size_t count);
+
+DESCRIPTION
+       read() attempts to read up to count bytes from file descriptor fd into the buffer starting at buf.
+
+       On  files  that support seeking, the read operation commences at the current file offset, and the file
+       offset is incremented by the number of bytes read.  If the current file offset is at or past  the  end
+       of file, no bytes are read, and read() returns zero.
+
+       If  count  is zero, read() may detect the errors described below.  In the absence of any errors, or if
+       read() does not check for errors, a read() with a count of 0 returns zero and has no other effects.
+
+       If count is greater than SSIZE_MAX, the result is unspecified.
+
+RETURN VALUE
+       On success, the number of bytes read is returned (zero indicates end of file), and the  file  position
+       is  advanced  by  this  number.  It is not an error if this number is smaller than the number of bytes
+       requested; this may happen for example because fewer bytes are actually  available  right  now  (maybe
+       because  we  were close to end-of-file, or because we are reading from a pipe, or from a terminal), or
+       because read() was interrupted by a signal.  See also NOTES.
+
+       On error, -1 is returned, and errno is set appropriately.   In  this  case,  it  is  left  unspecified
+       whether the file position (if any) changes.
+
+ERRORS
+       EAGAIN The  file  descriptor  fd  refers to a file other than a socket and has been marked nonblocking
+              (O_NONBLOCK), and the read would block.  See open(2) for  further  details  on  the  O_NONBLOCK
+              flag.
+
+       EAGAIN or EWOULDBLOCK
+              The file descriptor fd refers to a socket and has been marked nonblocking (O_NONBLOCK), and the
+              read would block.  POSIX.1-2001 allows either error to be returned for this case, and does  not
+              require these constants to have the same value, so a portable application should check for both
+              possibilities.
+
+       EBADF  fd is not a valid file descriptor or is not open for reading.
+
+       EFAULT buf is outside your accessible address space.
+
+       EINTR  The call was interrupted by a signal before any data was read; see signal(7).
+
+       EINVAL fd is attached to an object which is unsuitable for reading; or the file was  opened  with  the
+              O_DIRECT  flag,  and  either the address specified in buf, the value specified in count, or the
+              current file offset is not suitably aligned.
+
+       EINVAL fd was created via a call to timerfd_create(2) and the wrong size buffer was given  to  read();
+              see timerfd_create(2) for further information.
+
+       EIO    I/O  error.   This  will  happen for example when the process is in a background process group,
+              tries to read from its controlling terminal, and either it is ignoring or blocking  SIGTTIN  or
+              its  process  group  is  orphaned.  It may also occur when there is a low-level I/O error while
+              reading from a disk or tape.
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ apropos read
+__freadable (3)      - interfaces to stdio FILE structure
+__freading (3)       - interfaces to stdio FILE structure
+_llseek (2)          - reposition read/write file offset
+_sysctl (2)          - read/write system parameters
+accessdb (8)         - dumps the content of a man-db database in a human readable format
+aio_read (3)         - asynchronous read
+amidi (1)            - read from and write to ALSA RawMIDI ports
+arch_prctl (2)       - set architecture-specific thread state
+Archive::Zip::MemberRead (3pm) - A wrapper that lets you read Zip archive members as if they were files.
+asn1_read_node_value (3) - API function
+asn1_read_tag (3)    - API function
+asn1_read_value (3)  - API function
+asn1_read_value_type (3) - API function
+brlapi__acceptAllKeys (3) - Reading key presses
+brlapi__acceptKeyRanges (3) - Reading key presses
+brlapi__acceptKeys (3) - Reading key presses
+brlapi__ignoreAllKeys (3) - Reading key presses
+brlapi__ignoreKeyRanges (3) - Reading key presses
+brlapi__ignoreKeys (3) - Reading key presses
+brlapi__readKey (3)  - Reading key presses
+brlapi_acceptAllKeys (3) - Reading key presses
+brlapi_acceptKeyRanges (3) - Reading key presses
+brlapi_acceptKeys (3) - Reading key presses
+brlapi_describeKeyCode (3) - Reading key presses
+brlapi_expandKeyCode (3) - Reading key presses
+brlapi_ignoreAllKeys (3) - Reading key presses
+brlapi_ignoreKeyRanges (3) - Reading key presses
+brlapi_ignoreKeys (3) - Reading key presses
+brlapi_keys (3)      - Reading key presses
+brlapi_rangeType_all (3) - Reading key presses
+brlapi_rangeType_code (3) - Reading key presses
+brlapi_rangeType_command (3) - Reading key presses
+brlapi_rangeType_key (3) - Reading key presses
+brlapi_rangeType_t (3) - Reading key presses
+brlapi_rangeType_type (3) - Reading key presses
+brlapi_readKey (3)   - Reading key presses
+brlapi_readPacket (3) - BrlAPI's protocol
+brlapi_readPacketContent (3) - BrlAPI's protocol
+brlapi_readPacketHeader (3) - BrlAPI's protocol
+caca_file_read (3caca) - libcaca file IO
+capget (2)           - set/get capabilities of thread(s)
+capng_get_caps_fd (3) - read file-based capabilities from extended attributes
+capset (2)           - set/get capabilities of thread(s)
+dpkg-reconfigure (8) - reconfigure an already installed package
+drmHandleEvent (3)   - read and process pending DRM events
+endaliasent (3)      - read an alias entry
+eventfd_read (3)     - create a file descriptor for event notification
+exit_group (2)       - exit all threads in a process
+fc-cat (1)           - read font information cache files
+fdtdump (1)          - prints a readable version of a flat device-tree file.
+fdtget (1)           - read values from device-tree
+fgetwc (3)           - read a wide character from a FILE stream
+fgetws (3)           - read a wide-character string from a FILE stream
+fop-ttfreader (1)    - - A tool which reads TTF files and generates XML font metrics file for use in FOP.
+fread (3)            - binary stream input/output
+fread_unlocked (3)   - nonlocking stdio functions
+fts_read (3)         - traverse a file hierarchy
+get_mempolicy (2)    - retrieve NUMA memory policy for a thread
+get_thread_area (2)  - set a GDT entry for thread-local storage
+getaliasbyname (3)   - read an alias entry
+getaliasbyname_r (3) - read an alias entry
+getaliasent (3)      - read an alias entry
+getaliasent_r (3)    - read an alias entry
+getcpu (2)           - determine CPU and NUMA node on which the calling thread is running
+gettid (2)           - get thread identification
+getwc (3)            - read a wide character from a FILE stream
+getwchar (3)         - read a wide character from standard input
+gftype (1)           - translate a generic font file for humans to read
+git-prune-packed (1) - Remove extra objects that are already in pack files
+git-read-tree (1)    - Reads tree information into the index
+git-symbolic-ref (1) - Read, modify and delete symbolic refs
+gnumeric (1)         - a GNOME spreadsheet application.
+hwclock (8)          - read or set the hardware clock (RTC)
+info (1)             - read Info documents
+info (5)             - readable online documentation
+infobrowser (1)      - read Info documents
+io_getevents (2)     - read asynchronous I/O events from the completion queue
+io_prep_pread (3)    - Set up asynchronous read
+klogctl (3)          - read and/or clear kernel message ring buffer; set console_loglevel
+kpsereadlink (1)     - print contents of symbolic link
+libtiff (3tiff)      - introduction to libtiff, a library for reading and writing TIFF files
+line (1)             - read one line
+llseek (2)           - reposition read/write file offset
+lowntfs-3g (8)       - Third Generation Read/Write NTFS Driver
+lseek (2)            - reposition read/write file offset
+lseek64 (3)          - reposition 64-bit read/write file offset
+membarrier (2)       - issue memory barriers on a set of threads
+mio_read (3)         - sndio interface to MIDI streams
+mount.lowntfs-3g (8) - Third Generation Read/Write NTFS Driver
+mount.ntfs (8)       - Third Generation Read/Write NTFS Driver
+mount.ntfs-3g (8)    - Third Generation Read/Write NTFS Driver
+Net::DBus::Binding::Iterator (3pm) - Reading and writing message parameters
+nptl (7)             - Native POSIX Threads Library
+ntfs-3g (8)          - Third Generation Read/Write NTFS Driver
+ntptime (8)          - read kernel time variables
+numfmt (1)           - Convert numbers from/to human-readable strings
+pbmreduce (1)        - read a portable bitmap and reduce it N times
+pciconfig_read (2)   - pci device information handling
+pnmenlarge (1)       - read a portable anymap and enlarge it N times
+policytool (1)       - Reads and writes a plain text policy file based on user input through the utility GUI.
+ppmspread (1)        - displace a portable pixmap's pixels by a random amount
+pppdump (8)          - convert PPP record file to readable format
+pread (2)            - read from or write to a file descriptor at a given offset
+pread64 (2)          - read from or write to a file descriptor at a given offset
+preadv (2)           - read or write data into multiple buffers
+process_vm_readv (2) - transfer data between process address spaces
+pthread_attr_destroy (3) - initialize and destroy thread attributes object
+pthread_attr_getaffinity_np (3) - set/get CPU affinity attribute in thread attributes object
+pthread_attr_getdetachstate (3) - set/get detach state attribute in thread attributes object
+pthread_attr_getguardsize (3) - set/get guard size attribute in thread attributes object
+pthread_attr_getinheritsched (3) - set/get inherit-scheduler attribute in thread attributes object
+pthread_attr_getschedparam (3) - set/get scheduling parameter attributes in thread attributes object
+pthread_attr_getschedpolicy (3) - set/get scheduling policy attribute in thread attributes object
+pthread_attr_getscope (3) - set/get contention scope attribute in thread attributes object
+pthread_attr_getstack (3) - set/get stack attributes in thread attributes object
+pthread_attr_getstackaddr (3) - set/get stack address attribute in thread attributes object
+pthread_attr_getstacksize (3) - set/get stack size attribute in thread attributes object
+pthread_attr_init (3) - initialize and destroy thread attributes object
+pthread_attr_setaffinity_np (3) - set/get CPU affinity attribute in thread attributes object
+pthread_attr_setdetachstate (3) - set/get detach state attribute in thread attributes object
+pthread_attr_setguardsize (3) - set/get guard size attribute in thread attributes object
+pthread_attr_setinheritsched (3) - set/get inherit-scheduler attribute in thread attributes object
+pthread_attr_setschedparam (3) - set/get scheduling parameter attributes in thread attributes object
+pthread_attr_setschedpolicy (3) - set/get scheduling policy attribute in thread attributes object
+pthread_attr_setscope (3) - set/get contention scope attribute in thread attributes object
+pthread_attr_setstack (3) - set/get stack attributes in thread attributes object
+pthread_attr_setstackaddr (3) - set/get stack address attribute in thread attributes object
+pthread_attr_setstacksize (3) - set/get stack size attribute in thread attributes object
+pthread_cancel (3)   - send a cancellation request to a thread
+pthread_cleanup_pop (3) - push and pop thread cancellation clean-up handlers
+pthread_cleanup_pop_restore_np (3) - push and pop thread cancellation clean-up handlers while saving cancelab...
+pthread_cleanup_push (3) - push and pop thread cancellation clean-up handlers
+pthread_cleanup_push_defer_np (3) - push and pop thread cancellation clean-up handlers while saving cancelabi...
+pthread_create (3)   - create a new thread
+pthread_detach (3)   - detach a thread
+pthread_equal (3)    - compare thread IDs
+pthread_exit (3)     - terminate calling thread
+pthread_getaffinity_np (3) - set/get CPU affinity of a thread
+pthread_getattr_np (3) - get attributes of created thread
+pthread_getconcurrency (3) - set/get the concurrency level
+pthread_getcpuclockid (3) - retrieve ID of a thread's CPU time clock
+pthread_getname_np (3) - set/get the name of a thread
+pthread_getschedparam (3) - set/get scheduling policy and parameters of a thread
+pthread_join (3)     - join with a terminated thread
+pthread_kill (3)     - send a signal to a thread
+pthread_kill_other_threads_np (3) - terminate all other threads in process
+pthread_rwlockattr_getkind_np (3) - set/get the read-write lock kind of the thread read-write lock attribute ...
+pthread_rwlockattr_setkind_np (3) - set/get the read-write lock kind of the thread read-write lock attribute ...
+pthread_self (3)     - obtain ID of the calling thread
+pthread_setaffinity_np (3) - set/get CPU affinity of a thread
+pthread_setcancelstate (3) - set cancelability state and type
+pthread_setcanceltype (3) - set cancelability state and type
+pthread_setconcurrency (3) - set/get the concurrency level
+pthread_setname_np (3) - set/get the name of a thread
+pthread_setschedparam (3) - set/get scheduling policy and parameters of a thread
+pthread_setschedprio (3) - set scheduling priority of a thread
+pthread_sigmask (3)  - examine and change mask of blocked signals
+pthread_sigqueue (3) - queue a signal and data to a thread
+pthread_testcancel (3) - request delivery of any pending cancellation request
+pthread_timedjoin_np (3) - try to join with a terminated thread
+pthread_tryjoin_np (3) - try to join with a terminated thread
+pthread_yield (3)    - yield the processor
+pthreads (7)         - POSIX threads
+pwrite (2)           - read from or write to a file descriptor at a given offset
+pwrite64 (2)         - read from or write to a file descriptor at a given offset
+pwritev (2)          - read or write data into multiple buffers
+read (2)             - read from a file descriptor
+rwarray (3am)        - write and read gawk arrays to/from files
+readahead (2)        - initiate file readahead into page cache
+readdir (2)          - read directory entry
+readdir (3)          - read a directory
+readdir (3am)        - directory input parser for gawk
+readdir_r (3)        - read a directory
+readelf (1)          - Displays information about ELF files.
+readfile (3am)       - return the entire contents of a file as a string
+readline (3readline) - get a line from a user with editing
+readlink (1)         - print resolved symbolic links or canonical file names
+readlink (2)         - read value of a symbolic link
+readlink_by_handle (3) - file handle operations
+readlinkat (2)       - read value of a symbolic link
+readproc (3)         - read information from next /proc/## entry
+readproctab (3)      - read information for all current processes at once
+readprofile (8)      - read kernel profiling information
+readv (2)            - read or write data into multiple buffers
+s390_pci_mmio_read (2) - transfer data to/from PCI MMIO memory page
+sane-pnm (5)         - SANE PNM image reader pseudo-backend
+sasl_errstring (3)   - Translate a SASL return code to a human-readable form
+sched_getaffinity (2) - set and get a thread's CPU affinity mask
+sched_getcpu (3)     - determine CPU on which the calling thread is running
+sched_setaffinity (2) - set and get a thread's CPU affinity mask
+SDL_CDName (3)       - Returns a human-readable, system-dependent identifier for the CD-ROM.
+SDL_CondBroadcast (3) - Restart all threads waiting on a condition variable
+SDL_CondSignal (3)   - Restart a thread wait on a condition variable
+SDL_CreateThread (3) - Creates a new thread of execution that shares its parent's properties.
+SDL_GetThreadID (3)  - Get the SDL thread ID of a SDL_Thread
+SDL_KillThread (3)   - Gracelessly terminates the thread.
+SDL_SemTryWait (3)   - Attempt to lock a semaphore but don't suspend the thread.
+SDL_SemWait (3)      - Lock a semaphore and suspend the thread if the semaphore value is zero.
+SDL_ThreadID (3)     - Get the 32-bit thread identifier for the current thread.
+SDL_WaitThread (3)   - Wait for a thread to finish.
+seekdir (3)          - set the position of the next readdir() call in the directory stream.
+set_mempolicy (2)    - set default NUMA memory policy for a thread and its children
+set_thread_area (2)  - set a GDT entry for thread-local storage
+set_tid_address (2)  - set pointer to thread ID
+setaliasent (3)      - read an alias entry
+setns (2)            - reassociate thread with a namespace
+sio_read (3)         - sndio interface to audio devices
+sprof (1)            - read and display shared object profiling data
+ssconvert (1)        - a command line spreadsheet format converter
+ssdiff (1)           - compare two spreadsheets
+ssgrep (1)           - search spreadsheets for strings
+ssindex (1)          - generate index data for spreadsheet files
+sysctl (2)           - read/write system parameters
+syslog (2)           - read and/or clear kernel message ring buffer; set console_loglevel
+syslog (3)           - read and/or clear kernel message ring buffer; set console_loglevel
+tee (1)              - read from standard input and write to standard output and files
+tgkill (2)           - send a signal to a thread
+thread-keyring (7)   - Per-thread keyring
+TIFFFieldReadCount (3tiff) - Get number of values to be read from field
+TIFFOpen (3tiff)     - open a TIFF file for reading or writing
+TIFFbuffer (3tiff)   - I/O buffering control routines
+TIFFReadDirectory (3tiff) - get the contents of the next directory in an open TIFF file
+TIFFReadEncodedStrip (3tiff) - read and decode a strip of data from an open TIFF file
+TIFFReadEncodedTile (3tiff) - read and decode a tile of data from an open TIFF file
+TIFFReadRawStrip (3tiff) - return the undecoded contents of a strip of data from an open TIFF file
+TIFFReadRawTile (3tiff) - return an undecoded tile of data from an open TIFF file
+TIFFReadRGBAImage (3tiff) - read and decode an image into a fixed-format raster
+TIFFReadRGBAStrip (3tiff) - read and decode an image strip into a fixed-format raster
+TIFFReadRGBATile (3tiff) - read and decode an image tile into a fixed-format raster
+TIFFReadScanline (3tiff) - read and decode a scanline of data from an open TIFF file
+TIFFReadTile (3tiff) - read and decode a tile of data from an open TIFF file
+TIFFRGBAImage (3tiff) - read and decode an image into a raster
+tkill (2)            - send a signal to a thread
+ureadahead (8)       - Read files in advance during boot
+uselocale (3)        - set/get the locale for the calling thread
+watchgnupg (1)       - Read and print logs from a socket
+writev (2)           - read or write data into multiple buffers
+x86_64-linux-gnu-readelf (1) - Displays information about ELF files.
+XauReadAuth (3)      - X authority database routines
+XML::LibXML::Reader (3pm) - XML::LibXML::Reader - interface to libxml2 pull parser
+XML::SAX::PurePerl::Reader (3pm) - Abstract Reader factory class
+XtAppGetExitFlag (3) - thread support functions
+XtAppSetExitFlag (3) - thread support functions
+XtToolkitThreadInitialize (3) - initialize the toolkit for multiple threads
+YAML::Tiny (3pm)     - Read/Write YAML files with as little code as possible
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man -a read
+READ(2)                                   Linux Programmer's Manual                                   READ(2)
+
+NAME
+       read - read from a file descriptor
+
+SYNOPSIS
+       #include <unistd.h>
+
+       ssize_t read(int fd, void *buf, size_t count);
+
+DESCRIPTION
+MAN(1)                                        Manual pager utils                                       MAN(1)
+
+NAME
+       man - an interface to the on-line reference manuals
+
+SYNOPSIS
+       man  [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-m system[,...]] [-M path]
+       [-S list] [-e extension] [-i|-I] [--regex|--wildcard] [--names-only]  [-a]  [-u]  [--no-subpages]  [-P
+       pager]  [-r  prompt]  [-7]  [-E  encoding]  [--no-hyphenation]  [--no-justification]  [-p string] [-t]
+       [-T[device]] [-H[browser]] [-X[dpi]] [-Z] [[section] page ...] ...
+       man -k [apropos options] regexp ...
+       man -K [-w|-W] [-S list] [-i|-I] [--regex] [section] term ...
+       man -f [whatis options] page ...
+       man -l [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-P  pager]  [-r  prompt]
+       [-7] [-E encoding] [-p string] [-t] [-T[device]] [-H[browser]] [-X[dpi]] [-Z] file ...
+       man -w|-W [-C file] [-d] [-D] page ...
+       man -c [-C file] [-d] [-D] page ...
+       man [-?V]
+
+DESCRIPTION
+       man  is the system's manual pager.  Each page argument given to man is normally the name of a program,
+       utility or function.  The manual page associated with each of these arguments is then found  and  dis‐
+       played.   A  section,  if  provided,  will direct man to look only in that section of the manual.  The
+       default action is to search in all of the available sections following a pre-defined order ("1 n l 8 3
+       2  3posix  3pm  3perl  5  4 9 6 7" by default, unless overridden by the SECTION directive in /etc/man‐
+       path.config), and to show only the first page found, even if page exists in several sections.
+
+       The table below shows the section numbers of the manual followed by the types of pages they contain.
+
+       1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions eg /etc/passwd
+       6   Games
+       7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+
+       A manual page consists of several sections.
+
+       Conventional section names include NAME, SYNOPSIS, CONFIGURATION, DESCRIPTION,  OPTIONS,  EXIT STATUS,
+       RETURN VALUE,  ERRORS, ENVIRONMENT, FILES, VERSIONS, CONFORMING TO, NOTES, BUGS, EXAMPLE, AUTHORS, and
+       SEE ALSO.
+
+       The following conventions apply to the SYNOPSIS section and can be used as a guide in other sections.
+
+       bold text          type exactly as shown.
+       italic text        replace with appropriate argument.
+       [-abc]             any or all arguments within [ ] are optional.
+       -a|-b              options delimited by | cannot be used together.
+       argument ...       argument is repeatable.
+       [expression] ...   entire expression within [ ] is repeatable.
+
+       Exact rendering may vary depending on the output device.  For instance, man will usually not  be  able
+       to  render  italics  when  running  in  a terminal, and will typically use underlined or coloured text
+       instead.
+
+       The command or function illustration is a pattern that should match all possible invocations.  In some
+-----Info: (*manpages*)man, 833 lines --Top---------------------------------------------------------------------
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man -a man
+MAN(1)                                        Manual pager utils                                       MAN(1)
+
+NAME
+       man - an interface to the on-line reference manuals
+
+SYNOPSIS
+       man  [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-m system[,...]] [-M path]
+       [-S list] [-e extension] [-i|-I] [--regex|--wildcard] [--names-only]  [-a]  [-u]  [--no-subpages]  [-P
+       pager]  [-r  prompt]  [-7]  [-E  encoding]  [--no-hyphenation]  [--no-justification]  [-p string] [-t]
+       [-T[device]] [-H[browser]] [-X[dpi]] [-Z] [[section] page ...] ...
+       man -k [apropos options] regexp ...
+       man -K [-w|-W] [-S list] [-i|-I] [--regex] [section] term ...
+       man -f [whatis options] page ...
+       man -l [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-P  pager]  [-r  prompt]
+       [-7] [-E encoding] [-p string] [-t] [-T[device]] [-H[browser]] [-X[dpi]] [-Z] file ...
+       man -w|-W [-C file] [-d] [-D] page ...
+       man -c [-C file] [-d] [-D] page ...
+       man [-?V]
+
+DESCRIPTION
+       man  is the system's manual pager.  Each page argument given to man is normally the name of a program,
+       utility or function.  The manual page associated with each of these arguments is then found  and  dis‐
+       played.   A  section,  if  provided,  will direct man to look only in that section of the manual.  The
+       default action is to search in all of the available sections following a pre-defined order ("1 n l 8 3
+       2  3posix  3pm  3perl  5  4 9 6 7" by default, unless overridden by the SECTION directive in /etc/man‐
+       path.config), and to show only the first page found, even if page exists in several sections.
+
+       The table below shows the section numbers of the manual followed by the types of pages they contain.
+
+       1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions eg /etc/passwd
+       6   Games
+       7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+
+       A manual page consists of several sections.
+
+       Conventional section names include NAME, SYNOPSIS, CONFIGURATION, DESCRIPTION,  OPTIONS,  EXIT STATUS,
+       RETURN VALUE,  ERRORS, ENVIRONMENT, FILES, VERSIONS, CONFORMING TO, NOTES, BUGS, EXAMPLE, AUTHORS, and
+       SEE ALSO.
+
+       The following conventions apply to the SYNOPSIS section and can be used as a guide in other sections.
+
+       bold text          type exactly as shown.
+       italic text        replace with appropriate argument.
+       [-abc]             any or all arguments within [ ] are optional.
+       -a|-b              options delimited by | cannot be used together.
+       argument ...       argument is repeatable.
+       [expression] ...   entire expression within [ ] is repeatable.
+
+       Exact rendering may vary depending on the output device.  For instance, man will usually not  be  able
+       to  render  italics  when  running  in  a terminal, and will typically use underlined or coloured text
+       instead.
+
+       The command or function illustration is a pattern that should match all possible invocations.  In some
+       cases  it is advisable to illustrate several exclusive invocations as is shown in the SYNOPSIS section
+--Man-- next: man(7) [ view (return) | skip (Ctrl-D) | quit (Ctrl-C) ]
+ 
+MAN(7)                                    Linux Programmer's Manual                                    MAN(7)
+
+NAME
+       man - macros to format man pages
+
+SYNOPSIS
+       groff -Tascii -man file ...
+
+       groff -Tps -man file ...
+
+       man [section] title
+
+DESCRIPTION
+       This  manual page explains the groff an.tmac macro package (often called the man macro package).  This
+       macro package should be used by developers when writing or porting man pages for Linux.  It is  fairly
+       compatible with other versions of this macro package, so porting man pages should not be a major prob‐
+       lem (exceptions include the NET-2 BSD release, which uses a totally  different  macro  package  called
+       mdoc; see mdoc(7)).
+
+       Note  that  NET-2  BSD  mdoc  man  pages  can be used with groff simply by specifying the -mdoc option
+       instead of the -man option.  Using the -mandoc option is, however, recommended, since this will  auto‐
+       matically detect which macro package is in use.
+
+       For  conventions  that  should be employed when writing man pages for the Linux man-pages package, see
+       man-pages(7).
+
+   Title line
+       The first command in a man page (after comment lines, that is, lines that start with .\") should be
+
+              .TH title section date source manual
+
+       For details of the arguments that should be supplied to the TH command, see man-pages(7).
+
+       Note that BSD mdoc-formatted pages begin with the Dd command, not the TH command.
+
+   Sections
+       Sections are started with .SH followed by the heading name.
+
+       The only mandatory heading is NAME, which should be the first section and be followed on the next line
+       by a one-line description of the program:
+
+              .SH NAME
+              item \- description
+
+       It  is extremely important that this format is followed, and that there is a backslash before the sin‐
+       gle dash which follows the item name.  This syntax is used by the mandb(8) program to create  a  data‐
+       base  of  short  descriptions  for the whatis(1) and apropos(1) commands.  (See lexgrog(1) for further
+       details on the syntax of the NAME section.)
+
+       For a list of other sections that might appear in a manual page, see man-pages(7).
+
+   Fonts
+       The commands to select the type face are:
+
+       .B  Bold
+
+       .BI Bold alternating with italics (especially useful for function specifications)
+
+       .BR Bold alternating with Roman (especially useful for referring to other manual pages)
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man -a read
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man read
+READ(2)                                   Linux Programmer's Manual                                   READ(2)
+
+NAME
+       read - read from a file descriptor
+
+SYNOPSIS
+       #include <unistd.h>
+
+       ssize_t read(int fd, void *buf, size_t count);
+
+DESCRIPTION
+       read() attempts to read up to count bytes from file descriptor fd into the buffer starting at buf.
+
+       On  files  that support seeking, the read operation commences at the current file offset, and the file
+       offset is incremented by the number of bytes read.  If the current file offset is at or past  the  end
+       of file, no bytes are read, and read() returns zero.
+
+       If  count  is zero, read() may detect the errors described below.  In the absence of any errors, or if
+       read() does not check for errors, a read() with a count of 0 returns zero and has no other effects.
+
+       If count is greater than SSIZE_MAX, the result is unspecified.
+
+RETURN VALUE
+       On success, the number of bytes read is returned (zero indicates end of file), and the  file  position
+       is  advanced  by  this  number.  It is not an error if this number is smaller than the number of bytes
+       requested; this may happen for example because fewer bytes are actually  available  right  now  (maybe
+       because  we  were close to end-of-file, or because we are reading from a pipe, or from a terminal), or
+       because read() was interrupted by a signal.  See also NOTES.
+
+       On error, -1 is returned, and errno is set appropriately.   In  this  case,  it  is  left  unspecified
+       whether the file position (if any) changes.
+
+ERRORS
+       EAGAIN The  file  descriptor  fd  refers to a file other than a socket and has been marked nonblocking
+              (O_NONBLOCK), and the read would block.  See open(2) for  further  details  on  the  O_NONBLOCK
+              flag.
+
+       EAGAIN or EWOULDBLOCK
+              The file descriptor fd refers to a socket and has been marked nonblocking (O_NONBLOCK), and the
+              read would block.  POSIX.1-2001 allows either error to be returned for this case, and does  not
+              require these constants to have the same value, so a portable application should check for both
+              possibilities.
+
+       EBADF  fd is not a valid file descriptor or is not open for reading.
+
+       EFAULT buf is outside your accessible address space.
+
+       EINTR  The call was interrupted by a signal before any data was read; see signal(7).
+
+       EINVAL fd is attached to an object which is unsuitable for reading; or the file was  opened  with  the
+              O_DIRECT  flag,  and  either the address specified in buf, the value specified in count, or the
+              current file offset is not suitably aligned.
+
+       EINVAL fd was created via a call to timerfd_create(2) and the wrong size buffer was given  to  read();
+              see timerfd_create(2) for further information.
+
+       EIO    I/O  error.   This  will  happen for example when the process is in a background process group,
+              tries to read from its controlling terminal, and either it is ignoring or blocking  SIGTTIN  or
+              its  process  group  is  orphaned.  It may also occur when there is a low-level I/O error while
+              reading from a disk or tape.
+...skipping...
+       This page is part of release 4.04 of the Linux man-pages  project.   A  description  of  the  project,
+       information   about   reporting  bugs,  and  the  latest  version  of  this  page,  can  be  found  at
+       http://www.kernel.org/doc/man-pages/.
+       On Linux, read() (and similar system calls) will transfer at most  0x7ffff000  (2,147,479,552)  bytes,
+       returning the number of bytes actually transferred.  (This is true on both 32-bit and 64-bit systems.)
+
+       On  NFS filesystems, reading small amounts of data will update the timestamp only the first time, sub‐
+       sequent calls may not do so.  This is caused by client side attribute caching, because most if not all
+       NFS clients leave st_atime (last file access time) updates to the server, and client side reads satis‐
+       fied from the client's cache will not cause st_atime updates on the server as there are no server-side
+       reads.   UNIX semantics can be obtained by disabling client-side attribute caching, but in most situa‐
+       tions this will substantially increase server load and decrease performance.
+
+BUGS
+       According to POSIX.1-2008/SUSv4 Section XSI 2.9.7  ("Thread  Interactions  with  Regular  File  Opera‐
+       tions"):
+
+           All of the following functions shall be atomic with respect to each other in the effects specified
+           in POSIX.1-2008 when they operate on regular files or symbolic links: ...
+
+       Among the APIs subsequently listed are read() and readv(2).  And among  the  effects  that  should  be
+       atomic  across  threads (and processes) are updates of the file offset.  However, on Linux before ver‐
+       sion 3.14, this was not the case: if two processes that share an open file description  (see  open(2))
+       perform  a read() (or readv(2)) at the same time, then the I/O operations were not atomic with respect
+       updating the file offset, with the result that the reads in  the  two  processes  might  (incorrectly)
+       overlap in the blocks of data that they obtained.  This problem was fixed in Linux 3.14.
+
+SEE ALSO
+       close(2),   fcntl(2),  ioctl(2),  lseek(2),  open(2),  pread(2),  readdir(2),  readlink(2),  readv(2),
+       select(2), write(2), fread(3)
+
+COLOPHON
+       This page is part of release 4.04 of the Linux man-pages  project.   A  description  of  the  project,
+       information   about   reporting  bugs,  and  the  latest  version  of  this  page,  can  be  found  at
+       http://www.kernel.org/doc/man-pages/.
+
+Linux                                             2015-07-23                                          READ(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----Info: (*manpages*)read, 105 lines --Bot--------------------------------------------------------------------
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ q
+The program 'q' can be found in the following packages:
+ * python-q-text-as-data
+ * python3-q-text-as-data
+Try: sudo apt install <selected package>
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man read
+READ(2)                                   Linux Programmer's Manual                                   READ(2)
+
+NAME
+       read - read from a file descriptor
+
+SYNOPSIS
+       #include <unistd.h>
+
+       ssize_t read(int fd, void *buf, size_t count);
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ type read
+read is a shell builtin
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ help read
+read: read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchars] [-p prompt] [-t timeout] [-u fd] [name
+ ...]                                                                                                          
+    Read a line from the standard input and split it into fields.
+    
+    Reads a single line from the standard input, or from file descriptor FD
+    if the -u option is supplied.  The line is split into fields as with word
+    splitting, and the first word is assigned to the first NAME, the second
+    word to the second NAME, and so on, with any leftover words assigned to
+    the last NAME.  Only the characters found in $IFS are recognized as word
+    delimiters.
+    
+    If no NAMEs are supplied, the line read is stored in the REPLY variable.
+    
+    Options:
+      -a array  assign the words read to sequential indices of the array
+                variable ARRAY, starting at zero
+      -d delim  continue until the first character of DELIM is read, rather
+                than newline
+      -e                use Readline to obtain the line in an interactive shell
+      -i text   Use TEXT as the initial text for Readline
+      -n nchars return after reading NCHARS characters rather than waiting
+                for a newline, but honor a delimiter if fewer than NCHARS
+                characters are read before the delimiter
+      -N nchars return only after reading exactly NCHARS characters, unless
+                EOF is encountered or read times out, ignoring any delimiter
+      -p prompt output the string PROMPT without a trailing newline before
+                attempting to read
+      -r                do not allow backslashes to escape any characters
+      -s                do not echo input coming from a terminal
+      -t timeout        time out and return failure if a complete line of input is
+                not read within TIMEOUT seconds.  The value of the TMOUT
+                variable is the default timeout.  TIMEOUT may be a
+                fractional number.  If TIMEOUT is 0, read returns immediately,
+                without trying to read any data, returning success only if
+                input is available on the specified file descriptor.  The
+                exit status is greater than 128 if the timeout is exceeded
+      -u fd             read from file descriptor FD instead of the standard input
+    
+    Exit Status:
+    The return code is zero, unless end-of-file is encountered, read times out
+    (in which case it's greater than 128), a variable assignment error occurs,
+    or an invalid file descriptor is supplied as the argument to -u.
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
