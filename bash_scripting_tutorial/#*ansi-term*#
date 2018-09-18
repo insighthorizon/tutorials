@@ -1,293 +1,3 @@
-lrwxrwxrwx  1 root            root                          8 zář 17 15:02 net -> self/net
--r--r--r--  1 root            root                          0 zář 17 15:02 pagetypeinfo
--r--r--r--  1 root            root                          0 zář 17 15:02 partitions
--r--r--r--  1 root            root                          0 zář 17 15:02 sched_debug
--r--r--r--  1 root            root                          0 zář 17 15:02 schedstat
-dr-xr-xr-x  4 root            root                          0 zář 17 15:02 scsi
-lrwxrwxrwx  1 root            root                          0 zář 13 13:57 self -> 77833
--r--------  1 root            root                          0 zář 17 15:02 slabinfo
--r--r--r--  1 root            root                          0 zář 17 15:02 softirqs
--r--r--r--  1 root            root                          0 zář 17 15:02 stat
--r--r--r--  1 root            root                          0 zář 13 13:57 swaps
-dr-xr-xr-x  1 root            root                          0 zář 13 13:57 sys
---w-------  1 root            root                          0 zář 17 15:02 sysrq-trigger
-dr-xr-xr-x  2 root            root                          0 zář 17 15:02 sysvipc
-lrwxrwxrwx  1 root            root                          0 zář 13 13:57 thread-self -> 77833/task/77833
--r--------  1 root            root                          0 zář 17 15:02 timer_list
-dr-xr-xr-x  4 root            root                          0 zář 17 15:02 tty
--r--r--r--  1 root            root                          0 zář 17 15:02 uptime
--r--r--r--  1 root            root                          0 zář 17 15:02 version
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   #*ansi-term*#
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .#*ansi-term*
-        .#cars.sh
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
-*ansi-term*    #cars.sh#  cars.sh~       introduction.sh   login.sh   myscript.sh    random_word.sh  script2.sh
-#*ansi-term*#  cars.sh    fileBackup.sh  introduction.sh~  login.sh~  nextscript.sh  script1.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm *#*
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
-*ansi-term*  cars.sh~       introduction.sh   login.sh   myscript.sh    random_word.sh  script2.sh
-cars.sh      fileBackup.sh  introduction.sh~  login.sh~  nextscript.sh  script1.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    #*ansi-term*#
-        deleted:    #cars.sh#
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .#*ansi-term*
-        .#cars.sh
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm *#*
-rm 'bash_scripting_tutorial/#*ansi-term*#'
-rm 'bash_scripting_tutorial/#cars.sh#'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    #*ansi-term*#
-        deleted:    #cars.sh#
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .#*ansi-term*
-        .#cars.sh
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm *~
-rm 'bash_scripting_tutorial/cars.sh~'
-rm 'bash_scripting_tutorial/introduction.sh~'
-rm 'bash_scripting_tutorial/login.sh~'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    #*ansi-term*#
-        deleted:    #cars.sh#
-        deleted:    cars.sh~
-        deleted:    introduction.sh~
-        deleted:    login.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .#*ansi-term*
-        .#cars.sh
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm *#*
-fatal: pathspec '*#*' did not match any files
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm #*
-usage: git rm [<options>] [--] <file>...
-
-    -n, --dry-run         dry run
-    -q, --quiet           do not list removed files
-    --cached              only remove from the index
-    -f, --force           override the up-to-date check
-    -r                    allow recursive removal
-    --ignore-unmatch      exit with a zero status even if nothing matched
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm *\#*
-fatal: pathspec '*#*' did not match any files
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git pull
-remote: Counting objects: 5, done.
-remote: Compressing objects: 100% (4/4), done.
-remote: Total 5 (delta 1), reused 5 (delta 1), pack-reused 0
-Unpacking objects: 100% (5/5), done.
-From https://github.com/insighthorizon/tutorials
-   023fc1f..ab18bed  master     -> origin/master
-Updating 023fc1f..ab18bed
-Fast-forward
- bash_scripting_tutorial/salesdata.txt  | 4 ++++
- bash_scripting_tutorial/salesdata.txt~ | 0
- bash_scripting_tutorial/summary.sh     | 8 ++++++++
- bash_scripting_tutorial/summary.sh~    | 0
- 4 files changed, 12 insertions(+)
- create mode 100644 bash_scripting_tutorial/salesdata.txt
- create mode 100644 bash_scripting_tutorial/salesdata.txt~
- create mode 100755 bash_scripting_tutorial/summary.sh
- create mode 100755 bash_scripting_tutorial/summary.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    #*ansi-term*#
-        deleted:    #cars.sh#
-        deleted:    cars.sh~
-        deleted:    introduction.sh~
-        deleted:    login.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .#*ansi-term*
-        .#cars.sh
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
-*ansi-term*  fileBackup.sh    login.sh     nextscript.sh   salesdata.txt   script1.sh  summary.sh
-cars.sh      introduction.sh  myscript.sh  random_word.sh  salesdata.txt~  script2.sh  summary.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm \*ansi-term\* 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm *#*
-rm: cannot remove '*#*': No such file or directory
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    #*ansi-term*#
-        deleted:    #cars.sh#
-        deleted:    cars.sh~
-        deleted:    introduction.sh~
-        deleted:    login.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .#*ansi-term*
-        .#cars.sh
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -a
-.              .#cars.sh      introduction.sh  nextscript.sh   salesdata.txt~  summary.sh
-..             cars.sh        login.sh         random_word.sh  script1.sh      summary.sh~
-.#*ansi-term*  fileBackup.sh  myscript.sh      salesdata.txt   script2.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm .#*
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -a
-.   cars.sh        introduction.sh  myscript.sh    random_word.sh  salesdata.txt~  script2.sh  summary.sh~
-..  fileBackup.sh  login.sh         nextscript.sh  salesdata.txt   script1.sh      summary.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    #*ansi-term*#
-        deleted:    #cars.sh#
-        deleted:    cars.sh~
-        deleted:    introduction.sh~
-        deleted:    login.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-        deleted:    tut_activities1.sh~
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git add *
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git commit -m "clean this crap"
-[master e62ff90] clean this crap
- 5 files changed, 2061 deletions(-)
- delete mode 100644 bash_scripting_tutorial/#*ansi-term*#
- delete mode 100755 bash_scripting_tutorial/#cars.sh#
- delete mode 100755 bash_scripting_tutorial/cars.sh~
- delete mode 100755 bash_scripting_tutorial/introduction.sh~
- delete mode 100755 bash_scripting_tutorial/login.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git push origin master
-Username for 'https://github.com': insighthorizon
-Password for 'https://insighthorizon@github.com': 
-Counting objects: 3, done.
-Delta compression using up to 3 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 357 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/insighthorizon/tutorials.git
-   ab18bed..e62ff90  master -> master
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-        deleted:    tut_activities1.sh~
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        #*ansi-term*#
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git add *
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        new file:   #*ansi-term*#
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-        deleted:    tut_activities1.sh~
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -a
-.   #*ansi-term*#  fileBackup.sh    login.sh     nextscript.sh   salesdata.txt   script1.sh  summary.sh
-..  cars.sh        introduction.sh  myscript.sh  random_word.sh  salesdata.txt~  script2.sh  summary.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        new file:   #*ansi-term*#
 
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
@@ -2046,4 +1756,237 @@ marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l
 
 1
 ./lsfilter.sh: line 11: : No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh        
+wc: invalid zero-length file name
+
+
+./lsfilter.sh: line 11: : No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat lsfilter.sh
+#!/bin/bash
+
+# Now play about with creating a script which will behave as a filter. Create a script which will rearrange the 
+output of the command ls -l in a useful way (eg maybe you only print the filename, size and owner) (Hint: awk ca
+n be useful here).                                                                                             
+
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat ./login.sh | ./lsfilter.sh
+./lsfilter.sh: line 6: #!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details: No such file or directory
+#!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat ./login.sh | ./lsfilter.sh
+./lsfilter.sh: line 6: #!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details: No such file or directory
+#!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat ./login.sh 
+#!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat ./login.sh | ./lsfilter.sh
+#!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat ./login.sh | ./lsfilter.sh
+#!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat ./login.sh | ./lsfilter.sh
+#!/bin/bash
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
+9
+
+# Ask the user for login details
+
+read -p 'Username: ' uservar
+read -sp 'Password: ' passvar
+
+echo
+echo Thankyou $uservar we now have your login details
 marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh                
+total 260
+-rw-rw-r-- 1 marek marek 103463 zář 18 10:15 *ansi-term*
+-rw-rw-r-- 1 marek marek 101334 zář 18 10:31 #*ansi-term*#
+-rwxr-x--- 1 marek marek    197 zář 18 08:44 cars.sh
+-rwxr-x--- 1 marek marek    390 zář 17 13:08 fileBackup.sh
+-rwxr-x--- 1 marek marek    570 zář 18 09:03 inputAct.sh
+-rwxr-x--- 1 marek marek      0 zář 18 08:05 inputAct.sh~
+-rwxr-x--- 1 marek marek    118 zář 18 09:37 inputStdin.sh
+-rwxr-x--- 1 marek marek      0 zář 18 09:31 inputStdin.sh~
+-rwxr-x--- 1 marek marek    128 zář 17 13:59 introduction.sh
+-rwxr-x--- 1 marek marek    167 zář 17 14:28 login.sh
+-rwxr-x--- 1 marek marek    389 zář 18 10:30 lsfilter.sh
+-rwxr-x--- 1 marek marek      0 zář 18 09:47 lsfilter.sh~
+-rwxrwxr-x 1 marek marek    444 zář 17 08:59 myscript.sh
+-rwxrwxr-x 1 marek marek    139 zář 17 08:59 nextscript.sh
+-rwxrwxr-x 1 marek marek    368 zář 17 08:59 random_word.sh
+-rw-rw-r-- 1 marek marek    116 zář 18 07:58 salesdata.txt
+-rw-rw-r-- 1 marek marek      0 zář 18 07:58 salesdata.txt~
+-rwxrwxr-x 1 marek marek    202 zář 17 09:49 script1.sh
+-rwxrwxr-x 1 marek marek    132 zář 17 08:59 script2.sh
+-rwxrwxr-x 1 marek marek    172 zář 18 07:58 summary.sh
+-rwxrwxr-x 1 marek marek      0 zář 18 07:58 summary.sh~
+22
+-rw-rw-r-- 1 marek marek 103463 zář 18 10:15 *ansi-term*
+-rw-rw-r-- 1 marek marek 101334 zář 18 10:31 #*ansi-term*#
+-rwxr-x--- 1 marek marek    197 zář 18 08:44 cars.sh
+-rwxr-x--- 1 marek marek    390 zář 17 13:08 fileBackup.sh
+-rwxr-x--- 1 marek marek    570 zář 18 09:03 inputAct.sh
+-rwxr-x--- 1 marek marek      0 zář 18 08:05 inputAct.sh~
+-rwxr-x--- 1 marek marek    118 zář 18 09:37 inputStdin.sh
+-rwxr-x--- 1 marek marek      0 zář 18 09:31 inputStdin.sh~
+-rwxr-x--- 1 marek marek    128 zář 17 13:59 introduction.sh
+-rwxr-x--- 1 marek marek    167 zář 17 14:28 login.sh
+-rwxr-x--- 1 marek marek    389 zář 18 10:30 lsfilter.sh
+-rwxr-x--- 1 marek marek      0 zář 18 09:47 lsfilter.sh~
+-rwxrwxr-x 1 marek marek    444 zář 17 08:59 myscript.sh
+-rwxrwxr-x 1 marek marek    139 zář 17 08:59 nextscript.sh
+-rwxrwxr-x 1 marek marek    368 zář 17 08:59 random_word.sh
+-rw-rw-r-- 1 marek marek    116 zář 18 07:58 salesdata.txt
+-rw-rw-r-- 1 marek marek      0 zář 18 07:58 salesdata.txt~
+-rwxrwxr-x 1 marek marek    202 zář 17 09:49 script1.sh
+-rwxrwxr-x 1 marek marek    132 zář 17 08:59 script2.sh
+-rwxrwxr-x 1 marek marek    172 zář 18 07:58 summary.sh
+-rwxrwxr-x 1 marek marek      0 zář 18 07:58 summary.sh~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
+-rw-rw-r-- 1 marek marek 103463 zář 18 10:15 *ansi-term*
+-rw-rw-r-- 1 marek marek 101334 zář 18 10:31 #*ansi-term*#
+-rwxr-x--- 1 marek marek    197 zář 18 08:44 cars.sh
+-rwxr-x--- 1 marek marek    390 zář 17 13:08 fileBackup.sh
+-rwxr-x--- 1 marek marek    570 zář 18 09:03 inputAct.sh
+-rwxr-x--- 1 marek marek      0 zář 18 08:05 inputAct.sh~
+-rwxr-x--- 1 marek marek    118 zář 18 09:37 inputStdin.sh
+-rwxr-x--- 1 marek marek      0 zář 18 09:31 inputStdin.sh~
+-rwxr-x--- 1 marek marek    128 zář 17 13:59 introduction.sh
+-rwxr-x--- 1 marek marek    167 zář 17 14:28 login.sh
+-rwxr-x--- 1 marek marek    363 zář 18 10:31 lsfilter.sh
+-rwxr-x--- 1 marek marek      0 zář 18 09:47 lsfilter.sh~
+-rwxrwxr-x 1 marek marek    444 zář 17 08:59 myscript.sh
+-rwxrwxr-x 1 marek marek    139 zář 17 08:59 nextscript.sh
+-rwxrwxr-x 1 marek marek    368 zář 17 08:59 random_word.sh
+-rw-rw-r-- 1 marek marek    116 zář 18 07:58 salesdata.txt
+-rw-rw-r-- 1 marek marek      0 zář 18 07:58 salesdata.txt~
+-rwxrwxr-x 1 marek marek    202 zář 17 09:49 script1.sh
+-rwxrwxr-x 1 marek marek    132 zář 17 08:59 script2.sh
+-rwxrwxr-x 1 marek marek    172 zář 18 07:58 summary.sh
+-rwxrwxr-x 1 marek marek      0 zář 18 07:58 summary.sh~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
+*ansi-term*
+#*ansi-term*#
+cars.sh
+fileBackup.sh
+inputAct.sh
+inputAct.sh~
+inputStdin.sh
+inputStdin.sh~
+introduction.sh
+login.sh
+lsfilter.sh
+lsfilter.sh~
+myscript.sh
+nextscript.sh
+random_word.sh
+salesdata.txt
+salesdata.txt~
+script1.sh
+script2.sh
+summary.sh
+summary.sh~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
+*ansi-term* 103463 marek
+#*ansi-term*# 101334 marek
+cars.sh 197 marek
+fileBackup.sh 390 marek
+inputAct.sh 570 marek
+inputAct.sh~ 0 marek
+inputStdin.sh 118 marek
+inputStdin.sh~ 0 marek
+introduction.sh 128 marek
+login.sh 167 marek
+lsfilter.sh 370 marek
+lsfilter.sh~ 0 marek
+myscript.sh 444 marek
+nextscript.sh 139 marek
+random_word.sh 368 marek
+salesdata.txt 116 marek
+salesdata.txt~ 0 marek
+script1.sh 202 marek
+script2.sh 132 marek
+summary.sh 172 marek
+summary.sh~ 0 marek
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
+*ansi-term* 103463 marek
+#*ansi-term*# 101334 marek
+cars.sh 197 marek
+fileBackup.sh 390 marek
+inputAct.sh 570 marek
+inputAct.sh~ 0 marek
+inputStdin.sh 118 marek
+inputStdin.sh~ 0 marek
+introduction.sh 128 marek
+login.sh 167 marek
+lsfilter.sh 370 marek
+lsfilter.sh~ 0 marek
+myscript.sh 444 marek
+nextscript.sh 139 marek
+random_word.sh 368 marek
+salesdata.txt 116 marek
+salesdata.txt~ 0 marek
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
