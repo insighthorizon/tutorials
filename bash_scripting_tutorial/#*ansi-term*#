@@ -1,1457 +1,4 @@
 
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-        deleted:    tut_activities1.sh~
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm *ansi-term*
-error: the following file has changes staged in the index:
-    bash_scripting_tutorial/#*ansi-term*#
-(use --cached to keep the file, or -f to force removal)
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm tut_activities1.sh~ 
-rm 'bash_scripting_tutorial/tut_activities1.sh~'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        new file:   #*ansi-term*#
-        deleted:    tut_activities1.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm \*ansi-term\*
-error: the following file has changes staged in the index:
-    bash_scripting_tutorial/#*ansi-term*#
-(use --cached to keep the file, or -f to force removal)
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
-#*ansi-term*#  fileBackup.sh    login.sh     nextscript.sh   salesdata.txt   script1.sh  summary.sh
-cars.sh        introduction.sh  myscript.sh  random_word.sh  salesdata.txt~  script2.sh  summary.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        new file:   #*ansi-term*#
-        deleted:    tut_activities1.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm \#\*ansi-term\*# 
-error: the following file has changes staged in the index:
-    bash_scripting_tutorial/#*ansi-term*#
-(use --cached to keep the file, or -f to force removal)
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm -f *ansi-term*
-rm 'bash_scripting_tutorial/#*ansi-term*#'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    tut_activities1.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git add *
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        deleted:    tut_activities1.sh~
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git rm -f *ansi-term*
-fatal: pathspec '#*ansi-term*#' did not match any files
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git commit -m "crap"
-[master 9b863fb] crap
- 1 file changed, 9 deletions(-)
- delete mode 100755 bash_scripting_tutorial/tut_activities1.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git push origin master
-Username for 'https://github.com': insighthorizon
-Password for 'https://insighthorizon@github.com': 
-Counting objects: 3, done.
-Delta compression using up to 3 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 337 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/insighthorizon/tutorials.git
-   e62ff90..9b863fb  master -> master
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        deleted:    *ansi-term*
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        #*ansi-term*#
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
-#*ansi-term*#  fileBackup.sh    login.sh     nextscript.sh   salesdata.txt   script1.sh  summary.sh
-cars.sh        introduction.sh  myscript.sh  random_word.sh  salesdata.txt~  script2.sh  summary.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch inputAct.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 inputAct.sh 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-STRONG PASSWORD CREATOR
-============================
-Who has name day today?
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Who has name day today?
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD YYYY:
-9 18 2018
-Who has name day in 2 + 18 days (without diacritics)?
-Vera
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD YYYY:
-9 18 2018
-Who has name day in  + 18 days (without diacritics)?
-Vera
-Result: 9Vera1820182
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD YYYY:
-09 18 2018
-Who has name day in  + 09 days (without diacritics)?
-^C
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD YYYY:
-09 18 2018
-Who has name day in 2 + 09 days (without diacritics)?
-Vaclav
-Result: 09Vaclav1820182
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cd ..
-marek@marek-virtual-machine:~/Documents/tutorials$ cd ..
-marek@marek-virtual-machine:~/Documents$ ls
-notes  preklad  tutorials
-marek@marek-virtual-machine:~/Documents$ cd notes/
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   bash_notes.txt
-        modified:   mostBasic commands.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/notes$ git pull
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (1/1), done.
-remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/insighthorizon/notes
-   66229c2..00c6415  master     -> origin/master
-Updating 66229c2..00c6415
-error: Your local changes to the following files would be overwritten by merge:
-        bash_notes.txt
-Please, commit your changes or stash them before you can merge.
-Aborting
-marek@marek-virtual-machine:~/Documents/notes$ git add *
-marek@marek-virtual-machine:~/Documents/notes$ git commit -m "hope it can be merged"
-[master cc00d26] hope it can be merged
- 2 files changed, 14 insertions(+)
-marek@marek-virtual-machine:~/Documents/notes$ git pull
-Auto-merging bash_notes.txt
-CONFLICT (content): Merge conflict in bash_notes.txt
-Automatic merge failed; fix conflicts and then commit the result.
-marek@marek-virtual-machine:~/Documents/notes$ git merge bash_notes.txt
-error: merge is not possible because you have unmerged files.
-hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-hint: as appropriate to mark resolution and make a commit.
-fatal: Exiting because of an unresolved conflict.
-marek@marek-virtual-machine:~/Documents/notes$ ls
-bash_notes.txt  emacsNotes.txt  GNULinux hotkeys.txt  mostBasic commands.txt  README.md
-marek@marek-virtual-machine:~/Documents/notes$ mv bash_notes.txt bash_notes.txt.backup
-marek@marek-virtual-machine:~/Documents/notes$ rm  bash_notes.txt.backup 
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch and 'origin/master' have diverged,
-and have 1 and 1 different commit each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-You have unmerged paths.
-  (fix conflicts and run "git commit")
-
-Unmerged paths:
-  (use "git add <file>..." to mark resolution)
-
-        both modified:   bash_notes.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/notes$ git pull
-error: Pull is not possible because you have unmerged files.
-hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-hint: as appropriate to mark resolution and make a commit.
-fatal: Exiting because of an unresolved conflict.
-marek@marek-virtual-machine:~/Documents/notes$ git commit -m "fucked up"
-U       bash_notes.txt
-error: commit is not possible because you have unmerged files.
-hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-hint: as appropriate to mark resolution and make a commit.
-fatal: Exiting because of an unresolved conflict.
-marek@marek-virtual-machine:~/Documents/notes$ git pull
-error: Pull is not possible because you have unmerged files.
-hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-hint: as appropriate to mark resolution and make a commit.
-fatal: Exiting because of an unresolved conflict.
-marek@marek-virtual-machine:~/Documents/notes$ ls
-bash_notes.txt  emacsNotes.txt  GNULinux hotkeys.txt  mostBasic commands.txt  README.md
-marek@marek-virtual-machine:~/Documents/notes$ git add *
-marek@marek-virtual-machine:~/Documents/notes$ git commit -m "fucked up"
-[master 4841629] fucked up
-marek@marek-virtual-machine:~/Documents/notes$ git pull
-Already up-to-date.
-marek@marek-virtual-machine:~/Documents/notes$ ls
-bash_notes.txt  emacsNotes.txt  GNULinux hotkeys.txt  mostBasic commands.txt  README.md
-marek@marek-virtual-machine:~/Documents/notes$ git reset --hard HEAD^
-HEAD is now at cc00d26 hope it can be merged
-marek@marek-virtual-machine:~/Documents/notes$ git reset --hard HEAD^
-HEAD is now at 66229c2 edit
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-nothing to commit, working directory clean
-marek@marek-virtual-machine:~/Documents/notes$ git pull
-Updating 66229c2..00c6415
-Fast-forward
- bash_notes.txt | 13 ++++++++++++-
- 1 file changed, 12 insertions(+), 1 deletion(-)
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-nothing to commit, working directory clean
-marek@marek-virtual-machine:~/Documents/notes$ ls
-bash_notes.txt  emacsNotes.txt  GNULinux hotkeys.txt  mostBasic commands.txt  README.md
-marek@marek-virtual-machine:~/Documents/notes$ ls -a
-.  ..  bash_notes.txt  emacsNotes.txt  .git  GNULinux hotkeys.txt  mostBasic commands.txt  README.md
-marek@marek-virtual-machine:~/Documents/notes$ 
-marek@marek-virtual-machine:~/Documents/notes$ 
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-nothing to commit, working directory clean
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   mostBasic commands.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-        modified:   bash_notes.txt
-        modified:   mostBasic commands.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-marek@marek-virtual-machine:~/Documents/notes$ git add *
-marek@marek-virtual-machine:~/Documents/notes$ git commit -m "omfg"
-[master 0fdcb4a] omfg
- 2 files changed, 2 insertions(+), 1 deletion(-)
-marek@marek-virtual-machine:~/Documents/notes$ git push origin master
-Username for 'https://github.com': insighthorizon
-Password for 'https://insighthorizon@github.com': 
-Counting objects: 4, done.
-Delta compression using up to 3 threads.
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 417 bytes | 0 bytes/s, done.
-Total 4 (delta 3), reused 0 (delta 0)
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-To https://github.com/insighthorizon/notes.git
-   00c6415..0fdcb4a  master -> master
-marek@marek-virtual-machine:~/Documents/notes$ 
-marek@marek-virtual-machine:~/Documents/notes$ 
-marek@marek-virtual-machine:~/Documents/notes$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-nothing to commit, working directory clean
-marek@marek-virtual-machine:~/Documents/notes$ cd ..
-marek@marek-virtual-machine:~/Documents$ cd tutorials/bash_scripting_tutorial/
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ env
-XDG_VTNR=7
-LC_PAPER=cs_CZ.UTF-8
-SSH_AGENT_PID=1344
-XDG_SESSION_ID=c1
-LC_ADDRESS=cs_CZ.UTF-8
-LC_MONETARY=cs_CZ.UTF-8
-SAL_USE_VCLPLUGIN=gtk
-XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/marek
-TERM=eterm-color
-XDG_MENU_PREFIX=lxde-
-DESKTOP_STARTUP_ID=pcmanfm-1431-marek-virtual-machine-/usr/bin/emacs24-19_TIME34037370
-SHELL=/bin/bash
-LC_NUMERIC=cs_CZ.UTF-8
-OLDPWD=/home/marek/Documents
-USER=marek
-EMACS=24.5.1 (term:0.96)
-LC_TELEPHONE=cs_CZ.UTF-8
-LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=3
-7;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz
-=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01
-;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;
-31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*
-.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg
-=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;
-35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;3
-5:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*
-.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=
-01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36
-:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.
-ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:                                        
-XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
-XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
-SSH_AUTH_SOCK=/tmp/ssh-LscBWYISWMq1/agent.1273
-TERMCAP=eterm-color:li#33:co#37:cl=\E[H\E[J:cd=\E[J:bs:am:xn:cm=\E[%i%d;%dH:nd=\E[C:up=\E[A:ce=\E[K:ho=\E[H:pt:a
-l=\E[L:dl=\E[M:DL=\E[%dM:AL=\E[%dL:cs=\E[%i%d;%dr:sf=^J:dc=\E[P:DC=\E[%dP:IC=\E[%d@:im=\E[4h:ei=\E[4l:mi::so=\E[
-7m:se=\E[m:us=\E[4m:ue=\E[m:md=\E[1m:mr=\E[7m:me=\E[m:UP=\E[%dA:DO=\E[%dB:LE=\E[%dD:RI=\E[%dC:kl=\EOD:kd=\EOB:kr
-=\EOC:ku=\EOA:kN=\E[6~:kP=\E[5~:@7=\E[4~:kh=\E[1~:mk=\E[8m:cb=\E[1K:op=\E[39;49m:Co#8:pa#64:AB=\E[4%dm:AF=\E[3%d
-m:cr=^M:bl=^G:do=^J:le=^H:ta=^I:se=\E[27m:ue=\E24m:kb=^?:kD=^[[3~:sc=\E7:rc=\E8:r1=\Ec:                        
-DEFAULTS_PATH=/usr/share/gconf/Lubuntu.default.path
-COLUMNS=112
-XDG_CONFIG_DIRS=/etc/xdg/lubuntu:/etc/xdg/xdg-Lubuntu:/etc/xdg
-DESKTOP_SESSION=Lubuntu
-PATH=/home/marek/bin:/home/marek/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
-mes:/usr/local/games                                                                                           
-QT_QPA_PLATFORMTHEME=lxqt
-LC_IDENTIFICATION=cs_CZ.UTF-8
-XDG_SESSION_TYPE=x11
-PWD=/home/marek/Documents/tutorials/bash_scripting_tutorial
-LANG=en_US.UTF-8
-MANDATORY_PATH=/usr/share/gconf/Lubuntu.mandatory.path
-GDM_LANG=en_US
-LC_MEASUREMENT=cs_CZ.UTF-8
-LINES=58
-GDMSESSION=Lubuntu
-_LXSESSION_PID=1273
-QT_PLATFORM_PLUGIN=lxqt
-XDG_SEAT=seat0
-SHLVL=1
-HOME=/home/marek
-LANGUAGE=en_US
-TERMINFO=/usr/share/emacs/24.5/etc/
-XDG_CONFIG_HOME=/home/marek/.config
-LOGNAME=marek
-XDG_SESSION_DESKTOP=Lubuntu
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-IjYdo1B9wM,guid=006c98af6a7b89e277a167f85b9a50b6
-XDG_DATA_DIRS=/etc/xdg/lubuntu:/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/share/Lubuntu:/
-usr/local/share/:/usr/share/                                                                                   
-LESSOPEN=| /usr/bin/lesspipe %s
-XDG_RUNTIME_DIR=/run/user/1000
-DISPLAY=:0.0
-INSIDE_EMACS=24.5.1,term:0.96
-XDG_CURRENT_DESKTOP=LXDE
-LC_TIME=cs_CZ.UTF-8
-LESSCLOSE=/usr/bin/lesspipe %s %s
-XAUTHORITY=/home/marek/.Xauthority
-LC_NAME=cs_CZ.UTF-8
-_=/usr/bin/env
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM:
-^C
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD:
-09 18
-Who has name day in 2 + 09 days (without diacritics)?
-Vaclav
-Result: 09Vaclav182
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh beat 33
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD:
-09 18
-Who has name day in 2 + 09 days (without diacritics)?
-Vaclav
-Result: 09Vaclav3318beat2
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh beat 33
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD:
-09 18
-Who has name day in 2 + 09 days (without diacritics)?
-Vaclav
-Result: 1109Vaclav3318beat2
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputAct.sh beat 33
-"STRONG" PASSWORD CREATOR
-============================
-Please enter what day of week is today (1-7):
-2
-Please enter todays date in format MM DD:
-22 12
-Who has name day in 2 + 22 days (without diacritics)?
-kaEl
-Result: 1722kaEl3312beat2
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man cut
-CUT(1)                                          User Commands                                          CUT(1)
-
-NAME
-       cut - remove sections from each line of files
-
-SYNOPSIS
-       cut OPTION... [FILE]...
-
-DESCRIPTION
-       Print selected parts of lines from each FILE to standard output.
-
-       With no FILE, or when FILE is -, read standard input.
-
-       Mandatory arguments to long options are mandatory for short options too.
-
-       -b, --bytes=LIST
-              select only these bytes
-
-       -c, --characters=LIST
-              select only these characters
-
-       -d, --delimiter=DELIM
-              use DELIM instead of TAB for field delimiter
-
-       -f, --fields=LIST
-              select only these fields;  also print any line that contains no delimiter character, unless the
-              -s option is specified
-
-       -n     (ignored)
-
-       --complement
-              complement the set of selected bytes, characters or fields
-
-       -s, --only-delimited
-              do not print lines not containing delimiters
-
-       --output-delimiter=STRING
-              use STRING as the output delimiter the default is to use the input delimiter
-
-       -z, --zero-terminated
-              line delimiter is NUL, not newline
-
-       --help display this help and exit
-
-       --version
-              output version information and exit
-
-       Use one, and only one of -b, -c or -f.  Each LIST is made up of one range, or many ranges separated by
-       commas.   Selected  input  is  written in the same order that it is read, and is written exactly once.
-       Each range is one of:
-
-       N      N'th byte, character or field, counted from 1
-
-       N-     from N'th byte, character or field, to end of line
-
-       N-M    from N'th to M'th (included) byte, character or field
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
-#*ansi-term*#  inputAct.sh      login.sh       random_word.sh  script1.sh  summary.sh~
-cars.sh        inputAct.sh~     myscript.sh    salesdata.txt   script2.sh
-fileBackup.sh  introduction.sh  nextscript.sh  salesdata.txt~  summary.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat login.sh
-#!/bin/bash
-
-# Ask the user for login details
-
-read -p 'Username: ' uservar
-read -sp 'Password: ' passvar
-
-echo
-echo Thankyou $uservar we now have your login details
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ sed -n '3 p' < login.sh 
-# Ask the user for login details
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch inputStdin.sh
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 inputStdin.sh 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ help sed
-bash: help: no help topics match `sed'.  Try `help help' or `man -k sed' or `info sed'.
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man sed
-SED(1)                                          User Commands                                          SED(1)
-SED(1)                                          User Commands                                          SED(1)
-NAME
-NAME   sed - stream editor for filtering and transforming text
-       sed - stream editor for filtering and transforming text
-SYNOPSIS
-SYNOPSISed [OPTION]... {script-only-if-no-other-script} [input-file]...
-       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
-DESCRIPTION
-DESCRIPTION is  a  stream  editor.  A stream editor is used to perform basic text transformations on an input
-SED(1)                                          User Commands                                          SED(1)
-SED(1)                                          User Commands                                          SED(1)
-
-NAME
-       sed - stream editor for filtering and transforming text
-
-SYNOPSIS
-       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
-
-DESCRIPTION
-       Sed  is  a  stream  editor.  A stream editor is used to perform basic text transformations on an input
-       stream (a file or input from a pipeline).  While in some ways  similar  to  an  editor  which  permits
-       scripted  edits (such as ed), sed works by making only one pass over the input(s), and is consequently
-       more efficient.  But it is sed's ability to filter text in a pipeline which particularly distinguishes
-       it from other types of editors.
-       -n, --quiet, --silent
-       -n, --quiet, --silent
-              suppress automatic printing of pattern space
-              suppress automatic printing of pattern space
-       -e script, --expression=script
-       -e script, --expression=script
-              add the script to the commands to be executed
-              add the script to the commands to be executed
-       -f script-file, --file=script-file
-       -f script-file, --file=script-file
-              add the contents of script-file to the commands to be executed
-              add the contents of script-file to the commands to be executed
-       --follow-symlinks
-       --follow-symlinks
-              follow symlinks when processing in place
-              follow symlinks when processing in place
-       -i[SUFFIX], --in-place[=SUFFIX]
-       -i[SUFFIX], --in-place[=SUFFIX]
-              edit files in place (makes backup if SUFFIX supplied)
-              edit files in place (makes backup if SUFFIX supplied)
-       -l N, --line-length=N
-       -l N, --line-length=N
-              specify the desired line-wrap length for the `l' command
-              specify the desired line-wrap length for the `l' command
-       --posix
-       --posix
-              disable all GNU extensions.
-              disable all GNU extensions.
-       -r, --regexp-extended
-       -r, --regexp-extended
-              use extended regular expressions in the script.
-              use extended regular expressions in the script.
-       -s, --separate
-       -s, --separate
-              consider files as separate rather than as a single continuous long stream.
-              consider files as separate rather than as a single continuous long stream.
-       -u, --unbuffered
-       -u, --unbuffered
-              load minimal amounts of data from the input files and flush the output buffers more often
-              load minimal amounts of data from the input files and flush the output buffers more often
-       -z, --null-data
-       -z, --null-data
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man sed
-              separate lines by NUL characters
-
-       --help
-              display this help and exit
-
-       --version
-              output version information and exit
-
-       If  no -e, --expression, -f, or --file option is given, then the first non-option argument is taken as
-       the sed script to interpret.  All remaining arguments are names of input files; if no input files  are
-       specified, then the standard input is read.
-
-       GNU   sed   home   page:   <http://www.gnu.org/software/sed/>.    General  help  using  GNU  software:
-       <http://www.gnu.org/gethelp/>.  E-mail bug reports to: <bug-sed@gnu.org>.  Be sure to include the word
-       ``sed'' somewhere in the ``Subject:'' field.
-
-COMMAND SYNOPSIS
-       This  is  just  a brief synopsis of sed commands to serve as a reminder to those who already know sed;
-       other documentation (such as the texinfo document) must be consulted for fuller descriptions.
-
-   Zero-address ``commands''
-       : label
-              Label for b and t commands.
-
-       #comment
-              The comment extends until the next newline (or the end of a -e script fragment).
-
-       }      The closing bracket of a { } block.
-
-   Zero- or One- address commands
-       =      Print the current line number.
-
-       a \
-
-       text   Append text, which has each embedded newline preceded by a backslash.
-
-       i \
-
-       text   Insert text, which has each embedded newline preceded by a backslash.
-
-       q [exit-code]
-              Immediately quit the sed script without processing any more input, except that if auto-print is
-              not disabled the current pattern space will be printed.  The exit code argument is a GNU exten‐
-              sion.
-
-       Q [exit-code]
-              Immediately quit the sed script without processing any more input.  This is a GNU extension.
-
-       r filename
-              Append text read from filename.
-
-       R filename
-              Append a line read from filename.  Each invocation of the command reads a line from  the  file.
-              This is a GNU extension.
-
-   Commands which accept address ranges
-       {      Begin a block of commands (end with a }).
-
-       b label
-              Branch to label; if label is omitted, branch to end of script.
-
-       c \
-
-       text   Replace the selected lines with text, which has each embedded newline preceded by a backslash.
-
-       d      Delete pattern space.  Start next cycle.
-
-       D      If  pattern space contains no newline, start a normal new cycle as if the d command was issued.
-              Otherwise, delete text in the pattern space up to the first newline, and restart cycle with the
-              resultant pattern space, without reading a new line of input.
-
-       h H    Copy/append pattern space to hold space.
-
-       g G    Copy/append hold space to pattern space.
-
-       l      List out the current line in a ``visually unambiguous'' form.
-
-       l width
-              List  out the current line in a ``visually unambiguous'' form, breaking it at width characters.
-              This is a GNU extension.
-
-       n N    Read/append the next line of input into the pattern space.
-
-       p      Print the current pattern space.
-
-       P      Print up to the first embedded newline of the current pattern space.
-
-       s/regexp/replacement/
-              Attempt to match regexp against the pattern space.  If successful, replace that portion matched
-              with replacement.  The replacement may contain the special character & to refer to that portion
-              of the pattern space which matched, and the special escapes \1 through \9 to refer to the  cor‐
-              responding matching sub-expressions in the regexp.
-
-       t label
-              If  a  s/// has done a successful substitution since the last input line was read and since the
-              last t or T command, then branch to label; if label is omitted, branch to end of script.
-
-       T label
-              If no s/// has done a successful substitution since the last input line was read and since  the
-              last  t or T command, then branch to label; if label is omitted, branch to end of script.  This
-              is a GNU extension.
-
-       w filename
-              Write the current pattern space to filename.
-
-       W filename
-              Write the first line of the current pattern space to filename.  This is a GNU extension.
-
-       x      Exchange the contents of the hold and pattern spaces.
-
-       y/source/dest/
-              Transliterate the characters in the pattern space which appear in source to  the  corresponding
-              character in dest.
-
-Addresses
-       Sed  commands can be given with no addresses, in which case the command will be executed for all input
-       lines; with one address, in which case the command will only be executed for input lines  which  match
-       that  address;  or  with two addresses, in which case the command will be executed for all input lines
-       which match the inclusive range of lines starting from the first address and continuing to the  second
-       address.   Three  things  to note about address ranges: the syntax is addr1,addr2 (i.e., the addresses
-       are separated by a comma); the line which addr1 matched will always be accepted, even if addr2 selects
-       an earlier line; and if addr2 is a regexp, it will not be tested against the line that addr1 matched.
-
-       After  the  address  (or address-range), and before the command, a !  may be inserted, which specifies
-       that the command shall only be executed if the address (or address-range) does not match.
-
-       The following address types are supported:
-
-       number Match only the specified line number (which increments cumulatively across files, unless the -s
-              option is specified on the command line).
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man man
-MAN(1)                                        Manual pager utils                                       MAN(1)
-
-NAME
-       man - an interface to the on-line reference manuals
-
-SYNOPSIS
-       man  [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-m system[,...]] [-M path]
-       [-S list] [-e extension] [-i|-I] [--regex|--wildcard] [--names-only]  [-a]  [-u]  [--no-subpages]  [-P
-       pager]  [-r  prompt]  [-7]  [-E  encoding]  [--no-hyphenation]  [--no-justification]  [-p string] [-t]
-       [-T[device]] [-H[browser]] [-X[dpi]] [-Z] [[section] page ...] ...
-       man -k [apropos options] regexp ...
-       man -K [-w|-W] [-S list] [-i|-I] [--regex] [section] term ...
-       man -f [whatis options] page ...
-       man -l [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-P  pager]  [-r  prompt]
-       [-7] [-E encoding] [-p string] [-t] [-T[device]] [-H[browser]] [-X[dpi]] [-Z] file ...
-       man -w|-W [-C file] [-d] [-D] page ...
-       man -c [-C file] [-d] [-D] page ...
-       man [-?V]
-
-DESCRIPTION
-       man  is the system's manual pager.  Each page argument given to man is normally the name of a program,
-       utility or function.  The manual page associated with each of these arguments is then found  and  dis‐
-       played.   A  section,  if  provided,  will direct man to look only in that section of the manual.  The
-       default action is to search in all of the available sections following a pre-defined order ("1 n l 8 3
-       2  3posix  3pm  3perl  5  4 9 6 7" by default, unless overridden by the SECTION directive in /etc/man‐
-       path.config), and to show only the first page found, even if page exists in several sections.
-
-       The table below shows the section numbers of the manual followed by the types of pages they contain.
-
-       1   Executable programs or shell commands
-       2   System calls (functions provided by the kernel)
-       3   Library calls (functions within program libraries)
-       4   Special files (usually found in /dev)
-       5   File formats and conventions eg /etc/passwd
-       6   Games
-       7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
-       8   System administration commands (usually only for root)
-       9   Kernel routines [Non standard]
-
-       A manual page consists of several sections.
-
-       Conventional section names include NAME, SYNOPSIS, CONFIGURATION, DESCRIPTION,  OPTIONS,  EXIT STATUS,
-       RETURN VALUE,  ERRORS, ENVIRONMENT, FILES, VERSIONS, CONFORMING TO, NOTES, BUGS, EXAMPLE, AUTHORS, and
-       SEE ALSO.
-
-       The following conventions apply to the SYNOPSIS section and can be used as a guide in other sections.
-
-       bold text          type exactly as shown.
-       italic text        replace with appropriate argument.
-       [-abc]             any or all arguments within [ ] are optional.
-       -a|-b              options delimited by | cannot be used together.
-       argument ...       argument is repeatable.
-       [expression] ...   entire expression within [ ] is repeatable.
-
-       Exact rendering may vary depending on the output device.  For instance, man will usually not  be  able
-       to  render  italics  when  running  in  a terminal, and will typically use underlined or coloured text
-       instead.
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputStdin.sh < in
-inputAct.sh      inputAct.sh~     inputStdin.sh    inputStdin.sh~   introduction.sh  
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputStdin.sh < introduction.sh 
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputStdin.sh < login.sh 
-# Ask the user for login details
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat login.sh 
-#!/bin/bash
-
-# Ask the user for login details
-
-read -p 'Username: ' uservar
-read -sp 'Password: ' passvar
-
-echo
-echo Thankyou $uservar we now have your login details
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputStdin.sh < login.sh           
-# Ask the user for login details
-
-read -p 'Username: ' uservar
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./inputStdin.sh < login.sh 
-# Ask the user for login details
-
-read -p 'Username: ' uservar
-read -sp 'Password: ' passvar
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat "efwefwf " |./inputStdin.sh      
-cat: 'efwefwf ': No such file or directory
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat "efwefwf\n\nefaef" |./inputStdin.
-sh                                                                                                             
-cat: 'efwefwf\n\nefaef': No such file or directory
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "efwefwf\n\nefaef" |./inputStdin
-.sh                                                                                                            
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo "efwefwf\n\nefaef\nwgwgqgra" |./
-inputStdin.sh                                                                                                  
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man awk
-GAWK(1)                                        Utility Commands                                       GAWK(1)
-
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man awk
-GAWK(1)                                        Utility Commands                                       GAWK(1)
-
-NAME
-       gawk - pattern scanning and processing language
-
-SYNOPSIS
-       gawk [ POSIX or GNU style options ] -f program-file [ -- ] file ...
-       gawk [ POSIX or GNU style options ] [ -- ] program-text file ...
-
-DESCRIPTION
-       Gawk  is the GNU Project's implementation of the AWK programming language.  It conforms to the defini‐
-       tion of the language in the POSIX 1003.1 Standard.  This version in turn is based on  the  description
-       in The AWK Programming Language, by Aho, Kernighan, and Weinberger.  Gawk provides the additional fea‐
-       tures found in the current version of Brian Kernighan's awk and a number of GNU-specific extensions.
-
-       The command line consists of options to gawk itself, the AWK program text (if not supplied via the  -f
-       or --file options), and values to be made available in the ARGC and ARGV pre-defined AWK variables.
-
-       When gawk is invoked with the --profile option, it starts gathering profiling statistics from the exe‐
-       cution of the program.  Gawk runs more slowly in this mode, and automatically  produces  an  execution
-       profile in the file awkprof.out when done.  See the --profile option, below.
-
-       Gawk also has an integrated debugger. An interactive debugging session can be started by supplying the
-       --debug option to the command line. In this mode of execution, gawk loads the AWK source code and then
-       prompts  for  debugging commands.  Gawk can only debug AWK program source provided with the -f option.
-       The debugger is documented in GAWK: Effective AWK Programming.
-
-OPTION FORMAT
-       Gawk options may be either traditional POSIX-style one letter  options,  or  GNU-style  long  options.
-       POSIX  options start with a single “-”, while long options start with “--”.  Long options are provided
-       for both GNU-specific features and for POSIX-mandated features.
-
-       Gawk-specific options are typically used in long-option form.  Arguments to long  options  are  either
-       joined  with  the option by an = sign, with no intervening spaces, or they may be provided in the next
-       command line argument.  Long options may be abbreviated, as long as the abbreviation remains unique.
-
-       Additionally, every long option has a corresponding short option, so that the  option's  functionality
-       may be used from within #!  executable scripts.
-
-OPTIONS
-       Gawk  accepts  the following options.  Standard options are listed first, followed by options for gawk
-       extensions, listed alphabetically by short option.
-
-       -f program-file
-       --file program-file
-              Read the AWK program source from the file program-file, instead of from the first command  line
-              argument.  Multiple -f (or --file) options may be used.
-
-       -F fs
-       --field-separator fs
-              Use fs for the input field separator (the value of the FS predefined variable).
-
-       -v var=val
-       --assign var=val
-              Assign  the  value val to the variable var, before execution of the program begins.  Such vari‐
-              able values are available to the BEGIN rule of an AWK program.
-
-       -b
-       --characters-as-bytes
-              Treat all input data as single-byte characters. In other words, don't pay any attention to  the
-              locale  information  when  attempting  to process strings as multibyte characters.  The --posix
-              option overrides this one.
-
-       -c
-       --traditional
-              Run  in  compatibility  mode.   In  compatibility  mode,  gawk  behaves  identically  to  Brian
-              Kernighan's  awk;  none  of  the  GNU-specific  extensions are recognized.  See GNU EXTENSIONS,
-              below, for more information.
-
-       -C
-       --copyright
-              Print the short version of the GNU copyright information message on  the  standard  output  and
-              exit successfully.
-
-       -d[file]
-       --dump-variables[=file]
-              Print  a  sorted list of global variables, their types and final values to file.  If no file is
-              provided, gawk uses a file named awkvars.out in the current directory.
-              Having a list of all the global variables is a good way to look  for  typographical  errors  in
-              your  programs.  You would also use this option if you have a large program with a lot of func‐
-              tions, and you want to be sure that your functions don't  inadvertently  use  global  variables
-              that  you meant to be local.  (This is a particularly easy mistake to make with simple variable
-              names like i, j, and so on.)
-
-       -D[file]
-       --debug[=file]
-              Enable debugging of AWK programs.  By default, the debugger reads commands  interactively  from
-              the keyboard (standard input).  The optional file argument specifies a file with a list of com‐
-              mands for the debugger to execute non-interactively.
-
-       -e program-text
-       --source program-text
-              Use program-text as AWK program source code.   This  option  allows  the  easy  intermixing  of
-              library  functions (used via the -f and --file options) with source code entered on the command
-              line.  It is intended primarily for medium to large AWK programs used in shell scripts.
-
-       -E file
-       --exec file
-              Similar to -f, however, this is option is the last one processed.  This should be used with  #!
-              scripts,  particularly  for CGI applications, to avoid passing in options or source code (!) on
-              the command line from a URL.  This option disables command-line variable assignments.
-
-       -g
-       --gen-pot
-              Scan and parse the AWK program, and generate a GNU .pot (Portable Object Template) format  file
-              on standard output with entries for all localizable strings in the program.  The program itself
-              is not executed.  See the GNU gettext distribution for more information on .pot files.
-
-       -h
-       --help Print a relatively short summary of the available options on the standard output.  (Per the GNU
-              Coding Standards, these options cause an immediate, successful exit.)
-
-       -i include-file
-       --include include-file
-              Load  an awk source library.  This searches for the library using the AWKPATH environment vari‐
-              able.  If the initial search fails, another attempt will be made after appending the .awk  suf‐
-              fix.   The  file  will be loaded only once (i.e., duplicates are eliminated), and the code does
-              not constitute the main program source.
-
-       -l lib
-       --load lib
-              Load a shared library lib.  This searches for the  library  using  the  AWKLIBPATH  environment
-              variable.   If  the  initial  search  fails,  another  attempt will be made after appending the
-              default shared library suffix for the platform.  The library initialization routine is expected
-              to be named dl_load().
-
-       -L [value]
-       --lint[=value]
-              Provide  warnings  about  constructs  that are dubious or non-portable to other AWK implementa‐
-              tions.  With an optional argument of fatal, lint warnings become fatal  errors.   This  may  be
-              drastic, but its use will certainly encourage the development of cleaner AWK programs.  With an
-              optional argument of invalid, only warnings about things that are actually invalid are  issued.
-              (This is not fully implemented yet.)
-
-       -M
-       --bignum
-              Force  arbitrary precision arithmetic on numbers. This option has no effect if gawk is not com‐
-              piled to use the GNU MPFR and MP libraries.
-
-       -n
-       --non-decimal-data
-              Recognize octal and hexadecimal values in input data.  Use this option with great caution!
-
-       -N
-       --use-lc-numeric
-              This forces gawk to use the locale's decimal point character when parsing input data.  Although
-              the  POSIX  standard  requires  this  behavior, and gawk does so when --posix is in effect, the
-              default is to follow traditional behavior and use a  period  as  the  decimal  point,  even  in
-              locales where the period is not the decimal point character.  This option overrides the default
-              behavior, without the full draconian strictness of the --posix option.
-
-       -o[file]
-       --pretty-print[=file]
-              Output a pretty printed version of the program to file.  If no file is provided,  gawk  uses  a
-              file named awkprof.out in the current directory.
-
-       -O
-       --optimize
-              Enable optimizations upon the internal representation of the program.  Currently, this includes
-              simple constant-folding, and tail call elimination for recursive functions. The gawk maintainer
-              hopes to add additional optimizations over time.
-
-       -p[prof-file]
-       --profile[=prof-file]
-              Start  a  profiling  session,  and  send  the  profiling  data  to  prof-file.   The default is
-              awkprof.out.  The profile contains execution counts of each statement in  the  program  in  the
-              left margin and function call counts for each user-defined function.
-
-       -P
-       --posix
-              This turns on compatibility mode, with the following additional restrictions:
-
-              · \x escape sequences are not recognized.
-
-              · Only  space  and  tab  act as field separators when FS is set to a single space, newline does
-                not.
-
-              · You cannot continue lines after ?  and :.
-
-              · The synonym func for the keyword function is not recognized.
-
-              · The operators ** and **= cannot be used in place of ^ and ^=.
-
-       -r
-       --re-interval
-              Enable the use of interval expressions in regular expression matching (see Regular Expressions,
-              below).   Interval expressions were not traditionally available in the AWK language.  The POSIX
-              standard added them, to make awk and egrep consistent with each other.   They  are  enabled  by
-              default, but this option remains for use with --traditional.
-
-       -S
-       --sandbox
-              Runs  gawk  in  sandbox  mode, disabling the system() function, input redirection with getline,
-              output redirection with print and printf, and loading dynamic  extensions.   Command  execution
-              (through  pipelines)  is  also disabled.  This effectively blocks a script from accessing local
-              resources (except for the files specified on the command line).
-
-       -t
-       --lint-old
-              Provide warnings about constructs that are not portable to the original version of UNIX awk.
-
-       -V
-       --version
-              Print version information for this particular copy of gawk on the  standard  output.   This  is
-              useful mainly for knowing if the current copy of gawk on your system is up to date with respect
-              to whatever the Free Software Foundation is distributing.  This is also useful  when  reporting
-              bugs.  (Per the GNU Coding Standards, these options cause an immediate, successful exit.)
-
-       --     Signal  the end of options. This is useful to allow further arguments to the AWK program itself
-              to start with a “-”.  This provides consistency with the argument parsing  convention  used  by
-              most other POSIX programs.
-
-       In compatibility mode, any other options are flagged as invalid, but are otherwise ignored.  In normal
-       operation, as long as program text has been supplied, unknown options are passed on to the AWK program
-       in  the  ARGV array for processing.  This is particularly useful for running AWK programs via the “#!”
-       executable interpreter mechanism.
-
-       For POSIX compatibility, the -W option may be used, followed by the name of a long option.
-
-AWK PROGRAM EXECUTION
-       An AWK program consists of a sequence of pattern-action statements and optional function definitions.
-
-              @include "filename"
-              @load "filename"
-              pattern   { action statements }
-              function name(parameter list) { statements }
-
-       Gawk first reads the program source from the program-file(s) if specified, from arguments to --source,
-       or  from  the  first non-option argument on the command line.  The -f and --source options may be used
-       multiple times on the command line.  Gawk reads the program text as if all the program-files and  com‐
-       mand  line  source texts had been concatenated together.  This is useful for building libraries of AWK
-       functions, without having to include them in each new AWK program that uses them.   It  also  provides
-       the ability to mix library functions with command line programs.
-
-       In  addition,  lines  beginning with @include may be used to include other source files into your pro‐
-       gram, making library use even easier.  This is equivalent to using the -i option.
-
-       Lines beginning with @load may be used to load shared libraries into your program.  This is equivalent
-       to using the -l option.
-
-       The  environment  variable AWKPATH specifies a search path to use when finding source files named with
-       the -f and -i options.  If this variable does not exist, the default path is ".:/usr/local/share/awk".
-       (The  actual  directory  may  vary,  depending upon how gawk was built and installed.)  If a file name
-       given to the -f option contains a “/” character, no path search is performed.
-
-       The environment variable AWKLIBPATH specifies a search path to use when  finding  source  files  named
-       with the -l option.  If this variable does not exist, the default path is "/usr/local/lib/gawk".  (The
-       actual directory may vary, depending upon how gawk was built and installed.)
-
-       Gawk executes AWK programs in the following order.  First, all variable assignments specified via  the
-       -v  option are performed.  Next, gawk compiles the program into an internal form.  Then, gawk executes
-       the code in the BEGIN rule(s) (if any), and then proceeds to read each file named in  the  ARGV  array
-       (up to ARGV[ARGC]).  If there are no files named on the command line, gawk reads the standard input.
-
-       If  a  filename  on the command line has the form var=val it is treated as a variable assignment.  The
-       variable var will be assigned the value val.  (This happens after any BEGIN rule(s)  have  been  run.)
-       Command  line variable assignment is most useful for dynamically assigning values to the variables AWK
-       uses to control how input is broken into fields and records.  It is also useful for controlling  state
-       if multiple passes are needed over a single data file.
-
-       If the value of a particular element of ARGV is empty (""), gawk skips over it.
-
-       For  each  input file, if a BEGINFILE rule exists, gawk executes the associated code before processing
-       the contents of the file. Similarly, gawk executes the code associated with ENDFILE  after  processing
-       the file.
-
-       For  each  record  in  the input, gawk tests to see if it matches any pattern in the AWK program.  For
-       each pattern that the record matches, gawk executes the associated action.  The patterns are tested in
-       the order they occur in the program.
-
-       Finally, after all the input is exhausted, gawk executes the code in the END rule(s) (if any).
-
-   Command Line Directories
-       According  to  POSIX, files named on the awk command line must be text files.  The behavior is ``unde‐
-       fined'' if they are not.  Most versions of awk treat a directory on the command line as a fatal error.
-
-       Starting with version 4.0 of gawk, a directory on the command line produces a warning, but  is  other‐
-       wise skipped.  If either of the --posix or --traditional options is given, then gawk reverts to treat‐
-       ing directories on the command line as a fatal error.
-
-VARIABLES, RECORDS AND FIELDS
-       AWK variables are dynamic; they come into existence when they are first used.  Their values are either
-       floating-point numbers or strings, or both, depending upon how they are used.  AWK also has one dimen‐
-       sional arrays; arrays with multiple dimensions may be simulated.  Gawk provides true arrays of arrays;
-       see  Arrays,  below.   Several pre-defined variables are set as a program runs; these are described as
-       needed and summarized below.
-
-   Records
-       Normally, records are separated by newline characters.  You can control how records are  separated  by
-       assigning values to the built-in variable RS.  If RS is any single character, that character separates
-       records.  Otherwise, RS is a regular expression.  Text in the input that matches this regular  expres‐
-       sion  separates  the  record.   However, in compatibility mode, only the first character of its string
-       value is used for separating records.  If RS is set to the null string, then records are separated  by
-       blank  lines.  When RS is set to the null string, the newline character always acts as a field separa‐
-       tor, in addition to whatever value FS may have.
-
-   Fields
-       As each input record is read, gawk splits the record into fields, using the value of the  FS  variable
-       as  the  field separator.  If FS is a single character, fields are separated by that character.  If FS
-       is the null string, then each individual  character  becomes  a  separate  field.   Otherwise,  FS  is
-       expected  to  be a full regular expression.  In the special case that FS is a single space, fields are
-       separated by runs of spaces and/or tabs and/or newlines.  (But see the  section  POSIX  COMPATIBILITY,
-       below).  NOTE: The value of IGNORECASE (see below) also affects how fields are split when FS is a reg‐
-       ular expression, and how records are separated when RS is a regular expression.
-
-       If the FIELDWIDTHS variable is set to a space separated list of numbers, each  field  is  expected  to
-       have  fixed  width,  and  gawk  splits  up  the record using the specified widths.  The value of FS is
-       ignored.  Assigning a new value to FS or FPAT overrides the use of FIELDWIDTHS.
-
-       Similarly, if the FPAT variable is set to a string representing a regular expression,  each  field  is
-       made  up  of text that matches that regular expression. In this case, the regular expression describes
-       the fields themselves, instead of the text that separates the fields.  Assigning a new value to FS  or
-       FIELDWIDTHS overrides the use of FPAT.
-
-       Each  field in the input record may be referenced by its position: $1, $2, and so on.  $0 is the whole
-       record.  Fields need not be referenced by constants:
-
-              n = 5
-              print $n
-
-       prints the fifth field in the input record.
-
-       The variable NF is set to the total number of fields in the input record.
-
-       References to non-existent fields (i.e., fields after $NF) produce the null-string.  However,  assign‐
-       ing  to  a  non-existent  field (e.g., $(NF+2) = 5) increases the value of NF, creates any intervening
-       fields with the null string as their values, and causes the value of $0 to  be  recomputed,  with  the
-       fields  being  separated  by  the  value of OFS.  References to negative numbered fields cause a fatal
-       error.  Decrementing NF causes the values of fields past the new value to be lost, and the value of $0
-       to be recomputed, with the fields being separated by the value of OFS.
-
-       Assigning  a  value  to an existing field causes the whole record to be rebuilt when $0 is referenced.
-       Similarly, assigning a value to $0 causes the record to  be  resplit,  creating  new  values  for  the
-       fields.
-
-   Built-in Variables
-       Gawk's built-in variables are:
-
-       ARGC        The  number  of  command  line arguments (does not include options to gawk, or the program
-                   source).
-
-       ARGIND      The index in ARGV of the current file being processed.
-
-       ARGV        Array of command line arguments.  The array is indexed from 0 to ARGC  -  1.   Dynamically
-                   changing the contents of ARGV can control the files used for data.
-
-       BINMODE     On  non-POSIX systems, specifies use of “binary” mode for all file I/O.  Numeric values of
-                   1, 2, or 3, specify that input files, output files, or all files, respectively, should use
-                   binary  I/O.   String  values  of  "r",  or "w" specify that input files, or output files,
-                   respectively, should use binary I/O.  String values of "rw" or "wr" specify that all files
-                   should use binary I/O.  Any other string value is treated as "rw", but generates a warning
-                   message.
-
-       CONVFMT     The conversion format for numbers, "%.6g", by default.
-
-       ENVIRON     An array containing the values of the current environment.  The array is  indexed  by  the
-                   environment  variables,  each  element  being  the  value  of  that  variable (e.g., ENVI‐
-                   RON["HOME"] might be "/home/arnold").  Changing this array does not affect the environment
-                   seen by programs which gawk spawns via redirection or the system() function.
-
-       ERRNO       If  a  system  error occurs either doing a redirection for getline, during a read for get‐
-                   line, or during a close(), then ERRNO will contain a string  describing  the  error.   The
-                   value is subject to translation in non-English locales.
-
-       FIELDWIDTHS A  whitespace separated list of field widths.  When set, gawk parses the input into fields
-                   of fixed width, instead of using the value of the FS variable as the field separator.  See
-                   Fields, above.
-
-       FILENAME    The  name  of  the current input file.  If no files are specified on the command line, the
-                   value of FILENAME is “-”.  However, FILENAME is undefined inside the  BEGIN  rule  (unless
-                   set by getline).
-
-       FNR         The input record number in the current input file.
-
-       FPAT        A  regular  expression  describing the contents of the fields in a record.  When set, gawk
-                   parses the input into fields, where the fields match the regular  expression,  instead  of
-                   using the value of the FS variable as the field separator.  See Fields, above.
-
-       FS          The input field separator, a space by default.  See Fields, above.
-
-       FUNCTAB     An  array  whose indices and corresponding values are the names of all the user-defined or
-                   extension functions in the program.  NOTE: You may not use the delete statement  with  the
-                   FUNCTAB array.
-
-       IGNORECASE  Controls the case-sensitivity of all regular expression and string operations.  If IGNORE‐
-                   CASE has a non-zero value, then string comparisons and pattern matching  in  rules,  field
-                   splitting  with FS and FPAT, record separating with RS, regular expression matching with ~
-                   and !~, and the gensub(), gsub(), index(), match(), patsplit(), split(), and sub()  built-
-                   in  functions  all ignore case when doing regular expression operations.  NOTE: Array sub‐
-                   scripting is not affected.  However, the asort() and asorti() functions are affected.
-                   Thus, if IGNORECASE is not equal to zero, /aB/ matches all  of  the  strings  "ab",  "aB",
-                   "Ab",  and  "AB".   As with all AWK variables, the initial value of IGNORECASE is zero, so
-                   all regular expression and string operations are normally case-sensitive.
-
-       LINT        Provides dynamic control of the --lint option from within an AWK program.  When true, gawk
-                   prints  lint  warnings.  When false, it does not.  When assigned the string value "fatal",
-                   lint warnings become fatal errors, exactly like --lint=fatal.  Any other true  value  just
-                   prints warnings.
-
-       NF          The number of fields in the current input record.
-
-       NR          The total number of input records seen so far.
-
-       OFMT        The output format for numbers, "%.6g", by default.
-
-       OFS         The output field separator, a space by default.
-
-       ORS         The output record separator, by default a newline.
-
-       PREC        The working precision of arbitrary precision floating-point numbers, 53 by default.
-
-       PROCINFO    The  elements  of  this array provide access to information about the running AWK program.
-                   On some systems, there may be elements in the array, "group1" through "groupn" for some n,
-                   which  is the number of supplementary groups that the process has.  Use the in operator to
-                   test for these elements.  The following elements are guaranteed to be available:
-
-                   PROCINFO["egid"]    The value of the getegid(2) system call.
-
-                   PROCINFO["strftime"]
-                                       The default time format string for strftime().
-
-                   PROCINFO["euid"]    The value of the geteuid(2) system call.
-
-                   PROCINFO["FS"]      "FS" if field splitting with FS is in effect, "FPAT" if  field  split‐
-                                       ting  with FPAT is in effect, or "FIELDWIDTHS" if field splitting with
-                                       FIELDWIDTHS is in effect.
-
-                   PROCINFO["identifiers"]
-                                       A subarray, indexed by the names of all identifiers used in  the  text
-                                       of  the  AWK  program.   The values indicate what gawk knows about the
-                                       identifiers after it has finished parsing the program;  they  are  not
-                                       updated while the program runs.  For each identifier, the value of the
-                                       element is one of the following:
-
-                                       "array"
-                                              The identifier is an array.
-
-                                       "builtin"
-                                              The identifier is a built-in function.
-
-                                       "extension"
-                                              The identifier is an extension function loaded via @load or -l.
-
-                                       "scalar"
-                                              The identifier is a scalar.
-
-                                       "untyped"
-                                              The identifier is untyped (could be used as a scalar or  array,
-                                              gawk doesn't know yet).
-
-                                       "user" The identifier is a user-defined function.
-
-                   PROCINFO["gid"]     The value of the getgid(2) system call.
-
-                   PROCINFO["pgrpid"]  The process group ID of the current process.
-
-                   PROCINFO["pid"]     The process ID of the current process.
-
-                   PROCINFO["ppid"]    The parent process ID of the current process.
-
-                   PROCINFO["uid"]     The value of the getuid(2) system call.
-
-                   PROCINFO["sorted_in"]
-                                       If  this element exists in PROCINFO, then its value controls the order
-                                       in which array elements are traversed in for loops.  Supported  values
-                                       are  "@ind_str_asc",  "@ind_num_asc", "@val_type_asc", "@val_str_asc",
-                                       "@val_num_asc",  "@ind_str_desc",  "@ind_num_desc",  "@val_type_desc",
-                                       "@val_str_desc", "@val_num_desc", and "@unsorted".  The value can also
-                                       be the name of any comparison function defined as follows:
-
-                                            function cmp_func(i1, v1, i2, v2)
-
-                                       where i1 and i2 are the indices, and v1 and v2 are  the  corresponding
-                                       values  of the two elements being compared.  It should return a number
-                                       less than, equal to, or greater than 0, depending on how the  elements
-                                       of the array are to be ordered.
-
-                   PROCINFO["input", "READ_TIMEOUT"]
-                                       The  timeout  in milliseconds for reading data from input, where input
-                                       is a redirection string or a filename. A value of zero  or  less  than
-                                       zero means no timeout.
-
-                   PROCINFO["mpfr_version"]
-                                       The  version of the GNU MPFR library used for arbitrary precision num‐
-                                       ber support in gawk.  This entry is not present if MPFR support is not
-                                       compiled into gawk.
-
-                   PROCINFO["gmp_version"]
-                                       The  version of the GNU MP library used for arbitrary precision number
-                                       support in gawk.  This entry is not present if  MPFR  support  is  not
-                                       compiled into gawk.
-
-                   PROCINFO["prec_max"]
-                                       The  maximum precision supported by the GNU MPFR library for arbitrary
-                                       precision floating-point numbers.  This entry is not present  if  MPFR
-                                       support is not compiled into gawk.
-
-                   PROCINFO["prec_min"]
-                                       The  minimum  precision  allowed by the GNU MPFR library for arbitrary
-                                       precision floating-point numbers.  This entry is not present  if  MPFR
-                                       support is not compiled into gawk.
-
-                   PROCINFO["api_major"]
-                                       The  major version of the extension API.  This entry is not present if
-                                       loading dynamic extensions is not available.
-
-                   PROCINFO["api_minor"]
-                                       The minor version of the extension API.  This entry is not present  if
-                                       loading dynamic extensions is not available.
-
-                   PROCINFO["version"] the version of gawk.
-
-       ROUNDMODE   The  rounding  mode  to  use for arbitrary precision arithmetic on numbers, by default "N"
-                   (IEEE-754 roundTiesToEven mode).  The accepted values are "N" or "n" for  roundTiesToEven,
-                   "U"  or  "u"  for  roundTowardPositive, "D" or "d" for roundTowardNegative, "Z" or "z" for
-                   roundTowardZero, and if your version of GNU MPFR library  supports  it,  "A"  or  "a"  for
-                   roundTiesToAway.
-
-       RS          The input record separator, by default a newline.
-
-       RT          The record terminator.  Gawk sets RT to the input text that matched the character or regu‐
-                   lar expression specified by RS.
-
-       RSTART      The index of the first character matched by match(); 0 if no match.   (This  implies  that
-                   character indices start at one.)
-
-       RLENGTH     The length of the string matched by match(); -1 if no match.
-
-       SUBSEP      The character used to separate multiple subscripts in array elements, by default "\034".
-
-       SYMTAB      An  array whose indices are the names of all currently defined global variables and arrays
-                   in the program.  The array may be used for indirect access to read or write the value of a
-                   variable:
-
-                        foo = 5
-                        SYMTAB["foo"] = 4
-                        print foo    # prints 4
-
-                   The  isarray()  function may be used to test if an element in SYMTAB is an array.  You may
-                   not use the delete statement with the SYMTAB array.
-
-       TEXTDOMAIN  The text domain of the AWK program; used to find the localized translations for  the  pro‐
-                   gram's strings.
-
-   Arrays
-       Arrays  are subscripted with an expression between square brackets ([ and ]).  If the expression is an
-       expression list (expr, expr ...)  then the array subscript is a string consisting of the concatenation
-       of  the (string) value of each expression, separated by the value of the SUBSEP variable.  This facil‐
-       ity is used to simulate multiply dimensioned arrays.  For example:
-
-              i = "A"; j = "B"; k = "C"
-              x[i, j, k] = "hello, world\n"
-
-       assigns the string "hello, world\n" to the element of the array x  which  is  indexed  by  the  string
-       "A\034B\034C".  All arrays in AWK are associative, i.e., indexed by string values.
-
-       The special operator in may be used to test if an array has an index consisting of a particular value:
-
-              if (val in array)
-                   print array[val]
-
-       If the array has multiple subscripts, use (i, j) in array.
-
-       The  in  construct  may also be used in a for loop to iterate over all the elements of an array.  How‐
-       ever, the (i, j) in array construct only works in tests, not in for loops.
-
-       An element may be deleted from an array using the delete statement.  The delete statement may also  be
-       used to delete the entire contents of an array, just by specifying the array name without a subscript.
-
-       gawk supports true multidimensional arrays. It does not require that such arrays be ``rectangular'' as
-       in C or C++.  For example:
-
-              a[1] = 5
-              a[2][1] = 6
-              a[2][2] = 7
-
-       NOTE: You may need to tell gawk that an array element is really a subarray in order to  use  it  where
-       gawk  expects  an  array  (such as in the second argument to split()).  You can do this by creating an
-       element in the subarray and then deleting it with the delete statement.
-
-   Variable Typing And Conversion
-       Variables and fields may be (floating point) numbers, or strings, or both.  How the value of  a  vari‐
-       able  is interpreted depends upon its context.  If used in a numeric expression, it will be treated as
-       a number; if used as a string it will be treated as a string.
-
-       To force a variable to be treated as a number, add 0 to it; to force it to be  treated  as  a  string,
-       concatenate it with the null string.
-
-       Uninitialized variables have the numeric value 0 and the string value "" (the null, or empty, string).
-
-       When a string must be converted to a number, the conversion is accomplished using strtod(3).  A number
-       is converted to a string by using the value of CONVFMT as a format string  for  sprintf(3),  with  the
-       numeric  value of the variable as the argument.  However, even though all numbers in AWK are floating-
-       point, integral values are always converted as integers.  Thus, given
-
-              CONVFMT = "%2.2f"
-              a = 12
-              b = a ""
-
-       the variable b has a string value of "12" and not "12.00".
-
-       NOTE: When operating in POSIX mode (such as with the --posix option), beware that locale settings  may
-       interfere with the way decimal numbers are treated: the decimal separator of the numbers you are feed‐
-       ing to gawk must conform to what your locale would expect, be it a comma (,) or a period (.).
-
-       Gawk performs comparisons as follows: If two variables are numeric, they are compared numerically.  If
-       one value is numeric and the other has a string value that is a “numeric string,” then comparisons are
-       also done numerically.  Otherwise, the numeric value is converted to a string and a string  comparison
-       is performed.  Two strings are compared, of course, as strings.
-
-       Note  that  string  constants,  such as "57", are not numeric strings, they are string constants.  The
-       idea of “numeric string” only applies to fields, getline input, FILENAME, ARGV elements, ENVIRON  ele‐
-       ments  and  the  elements  of an array created by split() or patsplit() that are numeric strings.  The
-       basic idea is that user input, and only user input, that looks numeric, should be treated that way.
-
-   Octal and Hexadecimal Constants
-       You may use C-style octal and hexadecimal constants in your AWK program source code.  For example, the
-       octal value 011 is equal to decimal 9, and the hexadecimal value 0x11 is equal to decimal 17.
-
    String Constants
        String  constants  in  AWK  are sequences of characters enclosed between double quotes (like "value").
        Within strings, certain escape sequences are recognized, as in C.  These are:
@@ -1989,4 +536,1457 @@ nextscript.sh 139 marek
 random_word.sh 368 marek
 salesdata.txt 116 marek
 salesdata.txt~ 0 marek
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+*ansi-term*    fileBackup.sh  inputStdin.sh    login.sh      myscript.sh     salesdata.txt   script2.sh
+#*ansi-term*#  inputAct.sh    inputStdin.sh~   lsfilter.sh   nextscript.sh   salesdata.txt~  summary.sh
+cars.sh        inputAct.sh~   introduction.sh  lsfilter.sh~  random_word.sh  script1.sh      summary.sh~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat salesdata.txt
+Fred apples 20 September 4
+Susy oranges 5 September 7
+Mark watermelons 12 September 10
+Terry peaches 7 September 15
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cat salesdata.txt~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ rm salesdata.txt~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls
+*ansi-term*    fileBackup.sh  inputStdin.sh    login.sh      myscript.sh     salesdata.txt  summary.sh
+#*ansi-term*#  inputAct.sh    inputStdin.sh~   lsfilter.sh   nextscript.sh   script1.sh     summary.sh~
+cars.sh        inputAct.sh~   introduction.sh  lsfilter.sh~  random_word.sh  script2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   *ansi-term*
+        modified:   cars.sh
+        deleted:    salesdata.txt~
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        #*ansi-term*#
+        .#*ansi-term*
+        inputAct.sh
+        inputAct.sh~
+        inputStdin.sh
+        inputStdin.sh~
+        lsfilter.sh
+        lsfilter.sh~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git add *
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   #*ansi-term*#
+        modified:   *ansi-term*
+        new file:   .#*ansi-term*
+        modified:   cars.sh
+        new file:   inputAct.sh
+        new file:   inputAct.sh~
+        new file:   inputStdin.sh
+        new file:   inputStdin.sh~
+        new file:   lsfilter.sh
+        new file:   lsfilter.sh~
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    salesdata.txt~
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git commit -m "very nice"
+[master a63f724] very nice
+ 10 files changed, 4079 insertions(+), 2034 deletions(-)
+ create mode 100644 bash_scripting_tutorial/#*ansi-term*#
+ rewrite bash_scripting_tutorial/*ansi-term* (84%)
+ create mode 120000 bash_scripting_tutorial/.#*ansi-term*
+ create mode 100755 bash_scripting_tutorial/inputAct.sh
+ create mode 100755 bash_scripting_tutorial/inputAct.sh~
+ create mode 100755 bash_scripting_tutorial/inputStdin.sh
+ create mode 100755 bash_scripting_tutorial/inputStdin.sh~
+ create mode 100755 bash_scripting_tutorial/lsfilter.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr 5 + 3
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr 5 \* 3
+15
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr 5 * 3
+expr: syntax error
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr "5 * 4"
+5 * 4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr "5 \* 4"                        
+5 \* 4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr 4G4
+4G4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr 4\*4
+4*4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr gwgawhwh
+gwgawhwh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr gwgawh | a
+a: command not found
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ expr gwgawh + 3
+expr: non-integer argument
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ (( b = 11))
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo b
+b
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $b
+11
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man sed
+SED(1)                                          User Commands                                          SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+DESCRIPTION
+       Sed  is  a  stream  editor.  A stream editor is used to perform basic text transformations on an input
+       stream (a file or input from a pipeline).  While in some ways  similar  to  an  editor  which  permits
+       scripted  edits (such as ed), sed works by making only one pass over the input(s), and is consequently
+       more efficient.  But it is sed's ability to filter text in a pipeline which particularly distinguishes
+       it from other types of editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add the contents of script-file to the commands to be executed
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+              edit files in place (makes backup if SUFFIX supplied)
+
+       -l N, --line-length=N
+
+              specify the desired line-wrap length for the `l' command
+
+       --posix
+
+              disable all GNU extensions.
+
+       -r, --regexp-extended
+
+              use extended regular expressions in the script.
+
+       -s, --separate
+
+              consider files as separate rather than as a single continuous long stream.
+
+       -u, --unbuffered
+
+              load minimal amounts of data from the input files and flush the output buffers more often
+
+       -z, --null-data
+
+              separate lines by NUL characters
+
+       --help
+              display this help and exit
+
+       --version
+              output version information and exit
+
+       If  no -e, --expression, -f, or --file option is given, then the first non-option argument is taken as
+       the sed script to interpret.  All remaining arguments are names of input files; if no input files  are
+       specified, then the standard input is read.
+
+       GNU   sed   home   page:   <http://www.gnu.org/software/sed/>.    General  help  using  GNU  software:
+       <http://www.gnu.org/gethelp/>.  E-mail bug reports to: <bug-sed@gnu.org>.  Be sure to include the word
+       ``sed'' somewhere in the ``Subject:'' field.
+
+COMMAND SYNOPSIS
+       This  is  just  a brief synopsis of sed commands to serve as a reminder to those who already know sed;
+       other documentation (such as the texinfo document) must be consulted for fuller descriptions.
+
+   Zero-address ``commands''
+       : label
+              Label for b and t commands.
+
+       #comment
+              The comment extends until the next newline (or the end of a -e script fragment).
+
+       }      The closing bracket of a { } block.
+
+   Zero- or One- address commands
+       =      Print the current line number.
+
+       a \
+
+       text   Append text, which has each embedded newline preceded by a backslash.
+
+       i \
+
+       text   Insert text, which has each embedded newline preceded by a backslash.
+
+       q [exit-code]
+              Immediately quit the sed script without processing any more input, except that if auto-print is
+              not disabled the current pattern space will be printed.  The exit code argument is a GNU exten‐
+...skipping...
+       r filename
+              Append text read from filename.
+
+       R filename
+              Append a line read from filename.  Each invocation of the command reads a line from  the  file.
+              This is a GNU extension.
+
+   Commands which accept address ranges
+       {      Begin a block of commands (end with a }).
+
+       b label
+              Branch to label; if label is omitted, branch to end of script.
+
+       c \
+
+       text   Replace the selected lines with text, which has each embedded newline preceded by a backslash.
+
+       d      Delete pattern space.  Start next cycle.
+
+       D      If  pattern space contains no newline, start a normal new cycle as if the d command was issued.
+              Otherwise, delete text in the pattern space up to the first newline, and restart cycle with the
+              resultant pattern space, without reading a new line of input.
+
+       h H    Copy/append pattern space to hold space.
+
+       g G    Copy/append hold space to pattern space.
+
+       l      List out the current line in a ``visually unambiguous'' form.
+
+       l width
+              List  out the current line in a ``visually unambiguous'' form, breaking it at width characters.
+              This is a GNU extension.
+
+       n N    Read/append the next line of input into the pattern space.
+
+       p      Print the current pattern space.
+
+       P      Print up to the first embedded newline of the current pattern space.
+
+       s/regexp/replacement/
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch arithmetics1.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 arithmetics1.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 1 3
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ let "2 * 4"
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ let "2 * 4" | echo
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+6
+
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+6
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+Using let:
+6
+
+Using expr:
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+Using let:
+6
+
+Using expr:
+6
+
+Using double parentheses:
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 4 5
+Using let:
+20
+
+Using expr:
+20
+
+Using double parentheses:
+20
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ date -d '+1 day'
+St zář 19 12:32:12 CEST 2018
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ $(( today + 86400 ))
+86400: command not found
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ $(( today + 86400 ))
+86400: command not found
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ today=`date`
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ today=`date +%`
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $today
+%
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ today=`date +%s`
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $today
+1537266861
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ date --date 'next day'
+St zář 19 12:34:56 CEST 2018
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man date
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+...skipping...
+       Show the local time for 9AM next Friday on the west coast of the US
+
+              $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable  date  string  such  as  "Sun,  29  Feb  2004
+       16:21:42  -0800"  or  "2004-02-29  16:21:42" or even "next Thursday".  A date string may contain items
+       indicating calendar date, time of day, time zone, day of week, relative time, relative date, and  num‐
+       bers.   An  empty  string  indicates the beginning of the day.  The date string format is more complex
+       than is easily documented here but is fully described in the info documentation.
+
+AUTHOR
+       Written by David MacKenzie.
+
+REPORTING BUGS
+       GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+       Report date translation bugs to <http://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright © 2016 Free  Software  Foundation,  Inc.   License  GPLv3+:  GNU  GPL  version  3  or  later
+       <http://gnu.org/licenses/gpl.html>.
+       This  is  free  software:  you  are  free to change and redistribute it.  There is NO WARRANTY, to the
+       extent permitted by law.
+
+SEE ALSO
+       Full documentation at: <http://www.gnu.org/software/coreutils/date>
+       or available locally via: info '(coreutils) date invocation'
+
+GNU coreutils 8.25                              February 2017                                         DATE(1)
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man date
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man date
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+
+       %c     locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+
+       %C     century; like %Y, except omit last two digits (e.g., 20)
+
+       %d     day of month (e.g., 01)
+
+       %D     date; same as %m/%d/%y
+
+       %e     day of month, space padded; same as %_d
+
+       %F     full date; same as %Y-%m-%d
+
+       %g     last two digits of year of ISO week number (see %G)
+
+       %G     year of ISO week number (see %V); normally useful only with %V
+
+       %h     same as %b
+
+       %H     hour (00..23)
+
+       %I     hour (01..12)
+
+       %j     day of year (001..366)
+
+       %k     hour, space padded ( 0..23); same as %_H
+
+       %l     hour, space padded ( 1..12); same as %_I
+
+       %m     month (01..12)
+
+       %M     minute (00..59)
+
+       %n     a newline
+
+       %N     nanoseconds (000000000..999999999)
+
+       %p     locale's equivalent of either AM or PM; blank if not known
+
+       %P     like %p, but lower case
+
+       %r     locale's 12-hour clock time (e.g., 11:11:04 PM)
+
+       %R     24-hour hour and minute; same as %H:%M
+
+       %s     seconds since 1970-01-01 00:00:00 UTC
+
+       %S     second (00..60)
+
+       %t     a tab
+...skipping...
+       Show the local time for 9AM next Friday on the west coast of the US
+
+              $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable  date  string  such  as  "Sun,  29  Feb  2004
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man date
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+...skipping...
+       Show the local time for 9AM next Friday on the west coast of the US
+
+              $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable  date  string  such  as  "Sun,  29  Feb  2004
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+...skipping...
+       Show the local time for 9AM next Friday on the west coast of the US
+
+              $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable  date  string  such  as  "Sun,  29  Feb  2004
+DATE(1)                                         User Commands                                         DATE(1)
+
+NAME
+       date - print or set the system date and time
+
+SYNOPSIS
+       date [OPTION]... [+FORMAT]
+       date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+
+DESCRIPTION
+       Display the current time in the given FORMAT, or set the system date.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -d, --date=STRING
+              display time described by STRING, not 'now'
+
+       -f, --file=DATEFILE
+              like --date; once for each line of DATEFILE
+
+       -I[FMT], --iso-8601[=FMT]
+              output  date/time  in  ISO 8601 format.  FMT='date' for date only (the default), 'hours', 'min‐
+              utes',  'seconds',  or  'ns'  for  date  and  time  to  the  indicated   precision.    Example:
+              2006-08-14T02:34:56-0600
+
+       -R, --rfc-2822
+              output date and time in RFC 2822 format.  Example: Mon, 14 Aug 2006 02:34:56 -0600
+
+       --rfc-3339=FMT
+              output  date/time  in RFC 3339 format.  FMT='date', 'seconds', or 'ns' for date and time to the
+              indicated precision.  Example: 2006-08-14 02:34:56-06:00
+
+       -r, --reference=FILE
+              display the last modification time of FILE
+
+       -s, --set=STRING
+              set time described by STRING
+
+       -u, --utc, --universal
+              print or set Coordinated Universal Time (UTC)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       FORMAT controls the output.  Interpreted sequences are:
+
+       %%     a literal %
+
+       %a     locale's abbreviated weekday name (e.g., Sun)
+
+       %A     locale's full weekday name (e.g., Sunday)
+
+       %b     locale's abbreviated month name (e.g., Jan)
+
+       %B     locale's full month name (e.g., January)
+...skipping...
+       Show the local time for 9AM next Friday on the west coast of the US
+
+              $ date --date='TZ="America/Los_Angeles" 09:00 next Fri'
+
+DATE STRING
+       The --date=STRING is a mostly free format human readable  date  string  such  as  "Sun,  29  Feb  2004
+       16:21:42  -0800"  or  "2004-02-29  16:21:42" or even "next Thursday".  A date string may contain items
+       indicating calendar date, time of day, time zone, day of week, relative time, relative date, and  num‐
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo (($RANDOM % 101))
+bash: syntax error near unexpected token `('
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))              
+43
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ (($RANDOM % 101))
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))              
+67
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+39
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+93
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+97
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+37
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+51
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+93
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+53
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+48
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+27
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+17
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ echo $(($RANDOM % 101))
+71
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+Using let:
+6
+
+Using expr:
+6
+
+Using double parentheses:
+6
+./arithmetics1.sh: line 18: % 101 : syntax error: operand expected (error token is "% 101 ")
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics1.sh 2 3
+Using let:
+6
+
+Using expr:
+6
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch arithmetics2.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 arithmetics2.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics 3 10
+bash: ./arithmetics: No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10               
+Range is 7
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+3
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+3
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+3
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics 3 10
+bash: ./arithmetics: No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics 3 10
+bash: ./arithmetics: No such file or directory
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10               
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 7
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+10
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+10
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+10
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+10
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+8
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+9
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+6
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+4
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+5
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+Range is 8
+7
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./arithmetics2.sh 3 10
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man man
+MAN(1)                                        Manual pager utils                                       MAN(1)
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ touch if_example.sh
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 if_example.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 101
+./if_example.sh: line 5: syntax error near unexpected token `fi'
+./if_example.sh: line 5: `   fi'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 101
+./if_example.sh: line 5: syntax error near unexpected token `fi'
+./if_example.sh: line 5: `   fi'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 101
+./if_example.sh: line 5: syntax error near unexpected token `fi'
+./if_example.sh: line 5: `   fi'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 101
+./if_example.sh: line 3: [: missing `]'
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 101
+YES
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 10
+YES
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 1
+YES
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 1
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 101
+YES
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 10
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 120
+YES
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 11111
+YES
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 11111
+Argument is bigger than 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 11
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 11
+Argument is smaller than 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh -10000
+Argument is smaller than 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh 10000
+Argument is bigger than 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh --10000
+Argument is bigger than 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example.sh ---10000
+Argument is smaller than 100
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ chmod 750 if_example2.sh 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example2.sh 100
+Út zář 18 15:03:16 CEST 2018
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example2.sh 101
+Hey that's a large number.
+/home/marek/Documents/tutorials/bash_scripting_tutorial
+Út zář 18 15:03:21 CEST 2018
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ./if_example2.sh --101
+./if_example2.sh: line 5: [: --101: integer expression expected
+Út zář 18 15:03:47 CEST 2018
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man test
+TEST(1)                                         User Commands                                         TEST(1)
+
+NAME
+       test - check file types and compare values
+
+SYNOPSIS
+       test EXPRESSION
+       test
+
+       [ EXPRESSION ]
+       [ ]
+       [ OPTION
+
+DESCRIPTION
+       Exit with the status determined by EXPRESSION.
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       An omitted EXPRESSION defaults to false.  Otherwise, EXPRESSION is true or false and sets exit status.
+       It is one of:
+
+       ( EXPRESSION )
+              EXPRESSION is true
+
+       ! EXPRESSION
+              EXPRESSION is false
+
+       EXPRESSION1 -a EXPRESSION2
+              both EXPRESSION1 and EXPRESSION2 are true
+
+       EXPRESSION1 -o EXPRESSION2
+              either EXPRESSION1 or EXPRESSION2 is true
+
+       -n STRING
+              the length of STRING is nonzero
+
+       STRING equivalent to -n STRING
+
+       -z STRING
+              the length of STRING is zero
+
+       STRING1 = STRING2
+              the strings are equal
+
+       STRING1 != STRING2
+              the strings are not equal
+
+       INTEGER1 -eq INTEGER2
+              INTEGER1 is equal to INTEGER2
+
+       INTEGER1 -ge INTEGER2
+              INTEGER1 is greater than or equal to INTEGER2
+
+       INTEGER1 -gt INTEGER2
+              INTEGER1 is greater than INTEGER2
+
+       INTEGER1 -le INTEGER2
+              INTEGER1 is less than or equal to INTEGER2
+
+       INTEGER1 -lt INTEGER2
+              INTEGER1 is less than INTEGER2
+
+       INTEGER1 -ne INTEGER2
+              INTEGER1 is not equal to INTEGER2
+
+       FILE1 -ef FILE2
+              FILE1 and FILE2 have the same device and inode numbers
+
+       FILE1 -nt FILE2
+              FILE1 is newer (modification date) than FILE2
+
+       FILE1 -ot FILE2
+              FILE1 is older than FILE2
+
+       -b FILE
+              FILE exists and is block special
+
+       -c FILE
+              FILE exists and is character special
+
+       -d FILE
+              FILE exists and is a directory
+
+       -e FILE
+              FILE exists
+
+       -f FILE
+              FILE exists and is a regular file
+
+       -g FILE
+              FILE exists and is set-group-ID
+
+       -G FILE
+              FILE exists and is owned by the effective group ID
+
+       -h FILE
+              FILE exists and is a symbolic link (same as -L)
+
+       -k FILE
+              FILE exists and has its sticky bit set
+
+       -L FILE
+              FILE exists and is a symbolic link (same as -h)
+
+       -O FILE
+              FILE exists and is owned by the effective user ID
+
+       -p FILE
+              FILE exists and is a named pipe
+
+       -r FILE
+              FILE exists and read permission is granted
+
+       -s FILE
+              FILE exists and has a size greater than zero
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man test
+TEST(1)                                         User Commands                                         TEST(1)
+
+NAME
+       test - check file types and compare values
+
+SYNOPSIS
+TEST(1)                                         User Commands                                         TEST(1)
+
+NAME
+       test - check file types and compare values
+
+SYNOPSIS
+       test EXPRESSION
+       test
+
+       [ EXPRESSION ]
+       [ ]
+       [ OPTION
+
+DESCRIPTION
+       Exit with the status determined by EXPRESSION.
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       An omitted EXPRESSION defaults to false.  Otherwise, EXPRESSION is true or false and sets exit status.
+       It is one of:
+
+       ( EXPRESSION )
+              EXPRESSION is true
+
+       ! EXPRESSION
+              EXPRESSION is false
+
+       EXPRESSION1 -a EXPRESSION2
+              both EXPRESSION1 and EXPRESSION2 are true
+
+       EXPRESSION1 -o EXPRESSION2
+              either EXPRESSION1 or EXPRESSION2 is true
+
+       -n STRING
+              the length of STRING is nonzero
+
+       STRING equivalent to -n STRING
+
+       -z STRING
+              the length of STRING is zero
+
+       STRING1 = STRING2
+              the strings are equal
+
+       STRING1 != STRING2
+              the strings are not equal
+
+       INTEGER1 -eq INTEGER2
+              INTEGER1 is equal to INTEGER2
+
+       INTEGER1 -ge INTEGER2
+              INTEGER1 is greater than or equal to INTEGER2
+
+       INTEGER1 -gt INTEGER2
+              INTEGER1 is greater than INTEGER2
+
+       INTEGER1 -le INTEGER2
+              INTEGER1 is less than or equal to INTEGER2
+
+       INTEGER1 -lt INTEGER2
+              INTEGER1 is less than INTEGER2
+
+       INTEGER1 -ne INTEGER2
+              INTEGER1 is not equal to INTEGER2
+
+       FILE1 -ef FILE2
+              FILE1 and FILE2 have the same device and inode numbers
+
+       FILE1 -nt FILE2
+              FILE1 is newer (modification date) than FILE2
+
+       FILE1 -ot FILE2
+              FILE1 is older than FILE2
+
+       -b FILE
+              FILE exists and is block special
+
+       -c FILE
+              FILE exists and is character special
+
+       -d FILE
+              FILE exists and is a directory
+
+       -e FILE
+              FILE exists
+
+       -f FILE
+              FILE exists and is a regular file
+
+       -g FILE
+              FILE exists and is set-group-ID
+
+       -G FILE
+              FILE exists and is owned by the effective group ID
+
+       -h FILE
+              FILE exists and is a symbolic link (same as -L)
+
+       -k FILE
+              FILE exists and has its sticky bit set
+
+       [ ]
 marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
