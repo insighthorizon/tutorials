@@ -1,130 +1,3 @@
-
-   String Constants
-       String  constants  in  AWK  are sequences of characters enclosed between double quotes (like "value").
-       Within strings, certain escape sequences are recognized, as in C.  These are:
-
-       \\   A literal backslash.
-
-       \a   The “alert” character; usually the ASCII BEL character.
-
-       \b   Backspace.
-
-       \f   Form-feed.
-
-       \n   Newline.
-
-       \r   Carriage return.
-
-       \t   Horizontal tab.
-
-       \v   Vertical tab.
-
-       \xhex digits
-            The character represented by the string of hexadecimal digits following the \x.  As in ISO C, all
-            following  hexadecimal  digits  are considered part of the escape sequence.  (This feature should
-            tell us something about language design by committee.)  E.g., "\x1B" is the  ASCII  ESC  (escape)
-            character.
-
-       \ddd The  character  represented  by the 1-, 2-, or 3-digit sequence of octal digits.  E.g., "\033" is
-            the ASCII ESC (escape) character.
-
-       \c   The literal character c.
-
-       The escape sequences may also be used  inside  constant  regular  expressions  (e.g.,  /[ \t\f\n\r\v]/
-       matches whitespace characters).
-
-       In  compatibility  mode,  the  characters  represented  by  octal and hexadecimal escape sequences are
-       treated literally when used in regular expression constants.  Thus, /a\52b/ is equivalent to /a\*b/.
-
-PATTERNS AND ACTIONS
-       AWK is a line-oriented language.  The pattern comes first, and then the action.  Action statements are
-       enclosed in { and }.  Either the pattern may be missing, or the action may be missing, but, of course,
-       not both.  If the pattern is missing, the action is executed for every  single  record  of  input.   A
-       missing action is equivalent to
-
-              { print }
-
-       which prints the entire record.
-
-       Comments  begin with the # character, and continue until the end of the line.  Blank lines may be used
-       to separate statements.  Normally, a statement ends with a newline, however, this is not the case  for
-       lines  ending  in  a comma, {, ?, :, &&, or ||.  Lines ending in do or else also have their statements
-       automatically continued on the following line.  In other cases, a line can be continued by  ending  it
-       with a “\”, in which case the newline is ignored.
-
-       Multiple  statements  may  be put on one line by separating them with a “;”.  This applies to both the
-       statements within the action part of a pattern-action pair (the usual case), and to the pattern-action
-       statements themselves.
-
-   Patterns
-       AWK patterns may be one of the following:
-
-              BEGIN
-              END
-              BEGINFILE
-              ENDFILE
-              /regular expression/
-              relational expression
-              pattern && pattern
-              pattern || pattern
-              pattern ? pattern : pattern
-              (pattern)
-              ! pattern
-              pattern1, pattern2
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l
-total 168
--rw-rw-r-- 1 marek marek 111887 zář 18 09:51 #*ansi-term*#
--rwxr-x--- 1 marek marek    197 zář 18 08:44 cars.sh
--rwxr-x--- 1 marek marek    390 zář 17 13:08 fileBackup.sh
--rwxr-x--- 1 marek marek    570 zář 18 09:03 inputAct.sh
--rwxr-x--- 1 marek marek      0 zář 18 08:05 inputAct.sh~
--rwxr-x--- 1 marek marek    118 zář 18 09:37 inputStdin.sh
--rwxr-x--- 1 marek marek      0 zář 18 09:31 inputStdin.sh~
--rwxr-x--- 1 marek marek    128 zář 17 13:59 introduction.sh
--rwxr-x--- 1 marek marek    167 zář 17 14:28 login.sh
--rwxr-x--- 1 marek marek    287 zář 18 09:51 lsfilter.sh
--rwxr-x--- 1 marek marek      0 zář 18 09:47 lsfilter.sh~
--rwxrwxr-x 1 marek marek    444 zář 17 08:59 myscript.sh
--rwxrwxr-x 1 marek marek    139 zář 17 08:59 nextscript.sh
--rwxrwxr-x 1 marek marek    368 zář 17 08:59 random_word.sh
--rw-rw-r-- 1 marek marek    116 zář 18 07:58 salesdata.txt
--rw-rw-r-- 1 marek marek      0 zář 18 07:58 salesdata.txt~
--rwxrwxr-x 1 marek marek    202 zář 17 09:49 script1.sh
--rwxrwxr-x 1 marek marek    132 zář 17 08:59 script2.sh
--rwxrwxr-x 1 marek marek    172 zář 18 07:58 summary.sh
--rwxrwxr-x 1 marek marek      0 zář 18 07:58 summary.sh~
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
-168
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | wc -l
-21
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
-sed: -e expression #1, char 6: unknown command: `/'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
-sed: -e expression #1, char 6: unknown command: `/'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
-sed: -e expression #1, char 6: unknown command: `/'
-marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
 sed: -e expression #1, char 6: unknown command: `/'
 marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
 marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ ls -l | ./lsfilter.sh
@@ -1989,4 +1862,188 @@ DESCRIPTION
               FILE exists and has its sticky bit set
 
        [ ]
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ if (( 001 = 1 )); then
+> echo "yes"
+> fi
+bash: ((: 001 = 1 : attempted assignment to non-variable (error token is "= 1 ")
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ if (( 001 == 1 )); then echo "yes"; f
+i                                                                                                              
+yes
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ man expr
+EXPR(1)                                         User Commands                                         EXPR(1)
+
+NAME
+       expr - evaluate expressions
+
+SYNOPSIS
+       expr EXPRESSION
+       expr OPTION
+
+DESCRIPTION
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       Print  the value of EXPRESSION to standard output.  A blank line below separates increasing precedence
+       groups.  EXPRESSION may be:
+
+       ARG1 | ARG2
+              ARG1 if it is neither null nor 0, otherwise ARG2
+
+       ARG1 & ARG2
+              ARG1 if neither argument is null or 0, otherwise 0
+
+       ARG1 < ARG2
+              ARG1 is less than ARG2
+
+       ARG1 <= ARG2
+              ARG1 is less than or equal to ARG2
+
+       ARG1 = ARG2
+              ARG1 is equal to ARG2
+
+       ARG1 != ARG2
+              ARG1 is unequal to ARG2
+
+       ARG1 >= ARG2
+              ARG1 is greater than or equal to ARG2
+
+       ARG1 > ARG2
+              ARG1 is greater than ARG2
+
+       ARG1 + ARG2
+              arithmetic sum of ARG1 and ARG2
+
+       ARG1 - ARG2
+              arithmetic difference of ARG1 and ARG2
+
+       ARG1 * ARG2
+              arithmetic product of ARG1 and ARG2
+
+       ARG1 / ARG2
+              arithmetic quotient of ARG1 divided by ARG2
+
+       ARG1 % ARG2
+              arithmetic remainder of ARG1 divided by ARG2
+
 marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ 
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    salesdata.txt~
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   #*ansi-term*#
+        modified:   *ansi-term*
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        *ansi-term*~
+        100
+        100]
+        arithmetics1.sh
+        arithmetics1.sh~
+        arithmetics2.sh
+        arithmetics2.sh~
+        if_example.sh
+        if_example.sh~
+        if_example2.sh
+        if_example2.sh~
+
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git add *
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git commit -m "edit"
+[master 02a8d9e] edit
+ 13 files changed, 2888 insertions(+), 2845 deletions(-)
+ rewrite bash_scripting_tutorial/#*ansi-term*# (66%)
+ copy bash_scripting_tutorial/{#*ansi-term*# => *ansi-term*~} (88%)
+ rename bash_scripting_tutorial/{salesdata.txt~ => 100} (100%)
+ create mode 100644 bash_scripting_tutorial/100]
+ create mode 100755 bash_scripting_tutorial/arithmetics1.sh
+ create mode 100755 bash_scripting_tutorial/arithmetics1.sh~
+ create mode 100755 bash_scripting_tutorial/arithmetics2.sh
+ create mode 100755 bash_scripting_tutorial/arithmetics2.sh~
+ create mode 100755 bash_scripting_tutorial/if_example.sh
+ create mode 100755 bash_scripting_tutorial/if_example.sh~
+ create mode 100755 bash_scripting_tutorial/if_example2.sh
+ create mode 100755 bash_scripting_tutorial/if_example2.sh~
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ git push origin master
+Username for 'https://github.com': insighthorizon
+Password for 'https://insighthorizon@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 3 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 6.97 KiB | 0 bytes/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/insighthorizon/tutorials.git
+   a63f724..02a8d9e  master -> master
+marek@marek-virtual-machine:~/Documents/tutorials/bash_scripting_tutorial$ cd ../../notes/
+marek@marek-virtual-machine:~/Documents/notes$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   bash_notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marek@marek-virtual-machine:~/Documents/notes$ git add *
+marek@marek-virtual-machine:~/Documents/notes$ git commit -m "edit"
+[master e570ba5] edit
+ 1 file changed, 53 insertions(+)
+marek@marek-virtual-machine:~/Documents/notes$ git push origin master
+Username for 'https://github.com': insighthorizon
+Password for 'https://insighthorizon@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 3 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.07 KiB | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/insighthorizon/notes.git
+   0fdcb4a..e570ba5  master -> master
+marek@marek-virtual-machine:~/Documents/notes$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+marek@marek-virtual-machine:~/Documents/notes$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   bash_notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marek@marek-virtual-machine:~/Documents/notes$ git add *
+marek@marek-virtual-machine:~/Documents/notes$ git commit -m "edit
+> "
+[master 4232388] edit
+ 1 file changed, 2 insertions(+)
+marek@marek-virtual-machine:~/Documents/notes$ git push origin master
+Username for 'https://github.com': isnighthorizon
+Password for 'https://isnighthorizon@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/insighthorizon/notes.git/'
+marek@marek-virtual-machine:~/Documents/notes$ git push origin master
+Username for 'https://github.com': insighthorizon
+Password for 'https://insighthorizon@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 3 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/insighthorizon/notes.git
+   e570ba5..4232388  master -> master
+marek@marek-virtual-machine:~/Documents/notes$ 
